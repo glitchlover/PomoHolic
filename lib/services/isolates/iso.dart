@@ -2,6 +2,7 @@
 import 'dart:developer';
 import 'dart:isolate';
 
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
 
@@ -14,7 +15,7 @@ class Iso {
 
   startEngine(Function heavyFunc) async {
     ReceivePort receivePort = ReceivePort();
-    await Isolate.spawn(PomoSpaceControllers.startTimer(), null);
+    await compute(PomoSpaceControllers.startTimer(), dynamic);
     SendPort childSendPort = await receivePort.first;
 
     ReceivePort responsePort = ReceivePort();

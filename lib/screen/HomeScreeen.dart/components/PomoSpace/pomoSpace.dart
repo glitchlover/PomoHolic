@@ -403,7 +403,6 @@ class PomoSpaceControllers extends GetxController {
     }
     ctrl._timer = Timer.periodic(Duration(seconds: 1), (timer) async {
       ctrl.currentTimeCount.value++;
-      print(ctrl.currentTimeCount.value);
       ctrl.update();
 
       if (ctrl.currentTimeCount.value == ctrl.currentSettedWorkTime.value) {
@@ -422,23 +421,23 @@ class PomoSpaceControllers extends GetxController {
   }
 
 //////////////////////// Running Break //////////////////////////
-  void breakTimeStart() {
-    Wakelock.enable();
-    _timer?.cancel();
-    currentTimeCount.value = 0;
-    update();
-    if (currentSessions.value >= currentSettedSessions.value) {
-      setStatus(PomodoroStatus.setFinished);
-      currentSessions.value = 0;
-      giveRewards();
-      update();
+  static void breakTimeStart() {
+    PomoSpaceControllers ctrl = Get.find<PomoSpaceControllers>();
+    ctrl._timer?.cancel();
+    ctrl.currentTimeCount.value = 0;
+    ctrl.update();
+    if (ctrl.currentSessions.value >= ctrl.currentSettedSessions.value) {
+      ctrl.setStatus(PomodoroStatus.setFinished);
+      ctrl.currentSessions.value = 0;
+      ctrl.giveRewards();
+      ctrl.update();
     } else {
-      setStatus(PomodoroStatus.runningShortBreak);
-      _timer = Timer.periodic(Duration(seconds: 1), (timer) async {
-        currentTimeCount.value++;
-        update();
-        if (currentTimeCount.value == currentSettedBreakTime.value) {
-          setStatus(PomodoroStatus.extraBreak);
+      ctrl.setStatus(PomodoroStatus.runningShortBreak);
+      ctrl._timer = Timer.periodic(Duration(seconds: 1), (timer) async {
+        ctrl.currentTimeCount.value++;
+        ctrl.update();
+        if (ctrl.currentTimeCount.value == ctrl.currentSettedBreakTime.value) {
+          ctrl.setStatus(PomodoroStatus.extraBreak);
           Get.snackbar(
             "Break time is over.",
             "Go and work harder",
@@ -463,12 +462,12 @@ class PomoSpaceControllers extends GetxController {
       currentSessions.value == currentSettedSessions.value
           ? setStatus(PomodoroStatus.runningLongBreak)
           : setStatus(PomodoroStatus.runningShortBreak);
-      breakTimeStart();
+      Iso(debugName: "break-time").startEngine(breakTimeStart);
     } else if (currentStatus.value == PomodoroStatus.runningLongBreak ||
         currentStatus.value == PomodoroStatus.runningShortBreak ||
         currentStatus.value == PomodoroStatus.extraBreak) {
       setStatus(PomodoroStatus.runningPomodoro);
-      startTimer();
+      Iso(debugName: "time").startEngine(startTimer());
     } else {
       print("Status not found for " + currentStatus.string);
     }
