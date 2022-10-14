@@ -24,7 +24,7 @@ class PomoStart extends StatelessWidget {
     return MyIconButton(
             onPressed: () {
               // ctrl.setStatus(PomodoroStatus.runningPomodoro);
-              PomoSpaceControllers.startTimer();
+              ctrl.startTimer();
               // Get.to(() => TimerScreen(ctrl: ctrl));
             },
             icon: Icon(Icons.play_arrow_rounded,

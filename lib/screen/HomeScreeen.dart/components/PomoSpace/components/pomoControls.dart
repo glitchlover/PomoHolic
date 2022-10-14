@@ -81,7 +81,7 @@ class PomoControls extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all(MyColors.blue),
         ),
         onPressed: () {
-          Iso(debugName: "time").startEngine(PomoSpaceControllers.startTimer);
+          ctrl.startTimer();
         },
         icon: Icon(Icons.play_arrow_rounded),
         label: MyText("Start").textt());
@@ -118,7 +118,7 @@ class PomoControls extends StatelessWidget {
         backgroundColor: MaterialStateProperty.all(MyColors.green),
       ),
       onPressed: () {
-        Iso(debugName: "time").startEngine(PomoSpaceControllers.startTimer);
+        ctrl.startTimer();
       },
       icon: Icon(Icons.replay_rounded),
       label: MyText("Continue").textt(),

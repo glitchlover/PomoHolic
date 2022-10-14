@@ -162,7 +162,6 @@ class PomoSpaceControllers extends GetxController {
   @override
   void onInit() {
     setInitialUserData();
-    // initializeUpdateEngineIsolate();
     setStatus(PomodoroStatus.normal);
     listedToRecord();
     print(currentSettedWorkTime);
@@ -187,6 +186,7 @@ class PomoSpaceControllers extends GetxController {
     pomoHeart = userData.heart.obs;
   }
 
+  /// auto updating variable
   void updateUserData() {
     currentSettedWorkTime.listen((p0) {
       userDataInstance.updateUserData(defaultWorkingTime: p0);
@@ -388,27 +388,24 @@ class PomoSpaceControllers extends GetxController {
   }
 
 ////////////////////// Running Pomodoro //////////////////////
-  static startTimer() {
-    PomoSpaceControllers ctrl = Get.find<PomoSpaceControllers>();
-    ctrl.startDate = DateTime.now();
-    ctrl._timer?.cancel();
+  void startTimer() {
+    startDate = DateTime.now();
+    _timer?.cancel();
     Wakelock.enable();
-    ctrl.pomoActiveTaskTag.value == ""
-        ? ctrl.pomoActiveTaskTag.value = "Other"
-        : null;
-    if (ctrl.currentStatus.value == PomodoroStatus.pausedExtraPomodoro) {
-      ctrl.setStatus(PomodoroStatus.extraPomodoro);
+    pomoActiveTaskTag.value == "" ? pomoActiveTaskTag.value = "Other" : null;
+    if (currentStatus.value == PomodoroStatus.pausedExtraPomodoro) {
+      setStatus(PomodoroStatus.extraPomodoro);
     } else {
-      ctrl.setStatus(PomodoroStatus.runningPomodoro);
+      setStatus(PomodoroStatus.runningPomodoro);
     }
-    ctrl._timer = Timer.periodic(Duration(seconds: 1), (timer) async {
-      ctrl.currentTimeCount.value++;
-      ctrl.update();
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) async {
+      currentTimeCount.value++;
+      update();
 
-      if (ctrl.currentTimeCount.value == ctrl.currentSettedWorkTime.value) {
-        ctrl.setStatus(PomodoroStatus.extraPomodoro);
-        ctrl.currentSessions.value++;
-        ctrl.update();
+      if (currentTimeCount.value == currentSettedWorkTime.value) {
+        setStatus(PomodoroStatus.extraPomodoro);
+        currentSessions.value++;
+        update();
         Get.snackbar("You have done a lot!", "Go and take a break",
             duration: Duration(seconds: 5),
             padding: EdgeInsets.all(8),
@@ -467,7 +464,7 @@ class PomoSpaceControllers extends GetxController {
         currentStatus.value == PomodoroStatus.runningShortBreak ||
         currentStatus.value == PomodoroStatus.extraBreak) {
       setStatus(PomodoroStatus.runningPomodoro);
-      Iso(debugName: "time").startEngine(startTimer());
+      startTimer();
     } else {
       print("Status not found for " + currentStatus.string);
     }

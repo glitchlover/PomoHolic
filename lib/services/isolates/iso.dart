@@ -15,7 +15,7 @@ class Iso {
 
   startEngine(Function heavyFunc) async {
     ReceivePort receivePort = ReceivePort();
-    await compute(PomoSpaceControllers.startTimer(), dynamic);
+    // await compute(PomoSpaceControllers.startTimer(), dynamic);
     SendPort childSendPort = await receivePort.first;
 
     ReceivePort responsePort = ReceivePort();
