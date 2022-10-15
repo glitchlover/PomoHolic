@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:numberpicker/numberpicker.dart';
@@ -55,7 +54,7 @@ class MyTimePicker extends StatelessWidget {
                       ctrl.setSessionNumber(value);
                     },
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               GetPlatform.isMobile
@@ -131,7 +130,7 @@ class MyTimePicker extends StatelessWidget {
                   numberOfSessions: ctrl.getSessionNumber().obs);
               Get.back();
             },
-            icon: Icon(Pixel.check),
+            icon: const Icon(Pixel.check),
             label: MyText("OK").textt(),
             style: ElevatedButton.styleFrom(
               primary: MyColors.green,
@@ -140,7 +139,7 @@ class MyTimePicker extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: ImageIcon(AssetImage("assets/icons/cross.png"), size: 14),
+            icon: const ImageIcon(AssetImage("assets/icons/cross.png"), size: 14),
             label: MyText("Cancel").textt(),
             style: ElevatedButton.styleFrom(primary: MyColors.grey)),
       ],
@@ -201,21 +200,21 @@ class MyTimePickerController extends GetxController {
   void setReward() {
     pomoCoins.value = focusTime.value * sessionNumber.value;
     pomoGems.value =
-        (sessionNumber.value / 2).toInt() + (focusTime.value / 20).toInt();
+        sessionNumber.value ~/ 2 + focusTime.value ~/ 20;
   }
 
   setFocusTime(value) {
-    this.focusTime.value = value;
+    focusTime.value = value;
     setReward();
   }
 
   setBreakTime(value) {
-    this.breakTime.value = value;
+    breakTime.value = value;
     setReward();
   }
 
   setSessionNumber(value) {
-    this.sessionNumber.value = value;
+    sessionNumber.value = value;
     setReward();
   }
 

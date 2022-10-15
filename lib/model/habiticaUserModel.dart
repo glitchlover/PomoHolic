@@ -1912,13 +1912,13 @@ class Tag {
     factory Tag.fromMap(Map<String, dynamic> json) => Tag(
         name: json["name"],
         id: json["id"],
-        challenge: json["challenge"] == null ? null : json["challenge"],
+        challenge: json["challenge"],
     );
 
     Map<String, dynamic> toMap() => {
         "name": name,
         "id": id,
-        "challenge": challenge == null ? null : challenge,
+        "challenge": challenge,
     };
 }
 

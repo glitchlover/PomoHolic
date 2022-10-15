@@ -9,7 +9,7 @@ class MyContainer extends StatefulWidget {
   final double height;
   final double width;
 
-  MyContainer(
+  const MyContainer(
       {this.color,
       required this.child,
       required this.height,
@@ -41,7 +41,7 @@ class _MyContainerState extends State<MyContainer> {
                 borderRadius: BorderRadius.circular(20),
               ),
               padding: EdgeInsets.only(bottom: padding),
-              duration: Duration(milliseconds: 5),
+              duration: const Duration(milliseconds: 5),
               child: Container(
                 width: widget.width,
                 height: widget.height,

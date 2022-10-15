@@ -37,12 +37,12 @@ class HabiticaCard extends StatelessWidget {
       child: Container(
         clipBehavior: Clip.hardEdge,
         decoration: BoxDecoration(
-          borderRadius: new BorderRadius.all(Radius.circular(10)),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
           boxShadow: <BoxShadow>[
-            new BoxShadow(
+            BoxShadow(
               color: MyColors.darken(MyColors.purple, 50),
               blurRadius: 0,
-              offset: new Offset(0.0, 5.0),
+              offset: const Offset(0.0, 5.0),
             ),
           ],
         ),
@@ -57,7 +57,7 @@ class HabiticaCard extends StatelessWidget {
             controlAffinity: ListTileControlAffinity.leading,
             // backgroundColor: MyColors.backgroundColorLight,
             // collapsedBackgroundColor: MyColors.backgroundColorLight,
-            tilePadding: EdgeInsets.all(4),
+            tilePadding: const EdgeInsets.all(4),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -65,17 +65,17 @@ class HabiticaCard extends StatelessWidget {
                         onPressed: () {
                           ctrl.updateActiveTasks(pomoActiveTaskId: id);
                         },
-                        icon: Icon(Iconsax.clock))
+                        icon: const Icon(Iconsax.clock))
                     .paint(size: 20),
                 MyIconButton(
                     onPressed: () {
-                      PomoTasksOrderInput().addTaskDialog(edit: true, id:id);
+                      const PomoTasksOrderInput().addTaskDialog(edit: true, id:id);
                     },
-                    icon: Icon(Iconsax.edit_2)).paint(size: 20),
+                    icon: const Icon(Iconsax.edit_2)).paint(size: 20),
               ],
             ),
             title: Padding(
-                padding: EdgeInsets.only(bottom: 8),
+                padding: const EdgeInsets.only(bottom: 8),
                 child: MarkdownTile(
                   data: title,
                   fontWeight: FontWeight.w500,
@@ -85,7 +85,7 @@ class HabiticaCard extends StatelessWidget {
             children: [MarkdownTile(data: notes != null ? notes! : "")],
             // childrenPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
             expandedAlignment: Alignment.centerLeft,
-            childrenPadding: EdgeInsets.only(left: 20, right: 10, bottom: 10),
+            childrenPadding: const EdgeInsets.only(left: 20, right: 10, bottom: 10),
           ),
         ),
       ),
@@ -103,14 +103,14 @@ class HabiticaCard extends StatelessWidget {
                 ? Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: Color.fromARGB(255, 65, 71, 74),
+                      color: const Color.fromARGB(255, 65, 71, 74),
                     ),
-                    padding: EdgeInsets.symmetric(vertical: 2, horizontal: 3),
+                    padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 3),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Iconsax.tag, size: 12),
-                        SizedBox(width: 2),
+                        const Icon(Iconsax.tag, size: 12),
+                        const SizedBox(width: 2),
                         MarkdownTile(
                           data: tag!,
                           fontSize: 12,
@@ -121,12 +121,12 @@ class HabiticaCard extends StatelessWidget {
                 : MarkdownTile(data: ""),
           ],
         ),
-        SizedBox(height: 2),
+        const SizedBox(height: 2),
         dueDate != null
             ? Row(
                 children: [
-                  Icon(Iconsax.clock, size: 12),
-                  SizedBox(width: 3),
+                  const Icon(Iconsax.clock, size: 12),
+                  const SizedBox(width: 3),
                   MarkdownTile(
                           data: dueDate!.day.toString().padLeft(2, "0") +
                               "-" +

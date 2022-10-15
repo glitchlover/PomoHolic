@@ -7,6 +7,7 @@ class MyTextField extends TextField {
   final TextEditingController? txtController;
   final String? helperTxt;
   final String? value;
+  @override
   final void Function(String)? onChanged;
   bool isPwd;
   bool isApi;
@@ -39,13 +40,13 @@ class MyTextField extends TextField {
         onChanged: onChanged,
         decoration: InputDecoration(
             labelText: label,
-            labelStyle: TextStyle(color: MyColors.primaryColorLight),
+            labelStyle: const TextStyle(color: MyColors.primaryColorLight),
             helperText: helperTxt,
-            helperStyle: TextStyle(color: MyColors.pink),
-            contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            helperStyle: const TextStyle(color: MyColors.pink),
+            contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
             suffix: isPwd
                 ? IconButton(
-                    constraints: BoxConstraints(),
+                    constraints: const BoxConstraints(),
                     onPressed: () {
                       seepass = !seepass;
                     },

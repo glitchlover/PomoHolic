@@ -4,7 +4,7 @@ import '../Themes/myColors.dart';
 import 'myContainer.dart';
 
 class MyIconButton extends IconButton {
-  MyIconButton(
+  const MyIconButton(
       {required VoidCallback? onPressed,
       required Widget icon,
       Color color = MyColors.green})
@@ -41,7 +41,7 @@ class MyIconButton extends IconButton {
     return MyContainer(
       height: 40,
       width: 40,
-      color: color ?? Color.fromARGB(255, 203, 65, 55),
+      color: color ?? const Color.fromARGB(255, 203, 65, 55),
       child: IconButton(
         icon: icon,
         onPressed: onPressed,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/model/enums/pomodoroStatus.dart';
@@ -33,7 +32,7 @@ class MyClockProgressBar extends StatelessWidget {
                               return SweepGradient(
                                   stops: [value, value],
                                   center: Alignment.center,
-                                  colors: [
+                                  colors: const [
                                     MyColors.primaryColor,
                                     Colors.transparent,
                                   ]).createShader(rect);
@@ -41,7 +40,7 @@ class MyClockProgressBar extends StatelessWidget {
                             child: Container(
                                 width: size,
                                 height: size,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: Colors.white,
                                 ))),
@@ -49,7 +48,7 @@ class MyClockProgressBar extends StatelessWidget {
                           child: Container(
                               width: size - 10,
                               height: size - 10,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 // color: MyColors.scaffoldBackgroundColor,
                                 shape: BoxShape.circle,
                               )),

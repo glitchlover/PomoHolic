@@ -19,7 +19,7 @@ class PomoStart extends StatelessWidget {
               ctrl.startTimer();
               // Get.to(() => TimerScreen(ctrl: ctrl));
             },
-            icon: Icon(Icons.play_arrow_rounded,
+            icon: const Icon(Icons.play_arrow_rounded,
                 // color: MyColors.primaryWhite.withOpacity(0.8)))
             ))
         .cicle(40);

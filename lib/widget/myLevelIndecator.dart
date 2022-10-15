@@ -23,14 +23,14 @@ class LevelIndecator extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          constraints: BoxConstraints(maxWidth: 200),
+          constraints: const BoxConstraints(maxWidth: 200),
           child: Obx(() => GFProgressBar(
                 leading: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
                   child: Row(
                     children: [
                       MyText("Level", color: Colors.blueGrey[100]).text(17),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       GFBadge(
                         color: MyColors.yellow,
                         shape: GFBadgeShape.circle,
@@ -56,8 +56,8 @@ class LevelIndecator extends StatelessWidget {
           )
           ),
         ),
-        SizedBox(width: 10,),
-        PomoRewards(),
+        const SizedBox(width: 10,),
+        const PomoRewards(),
       ],
     );
   }

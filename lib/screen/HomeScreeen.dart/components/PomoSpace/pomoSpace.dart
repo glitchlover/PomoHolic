@@ -47,13 +47,13 @@ class PomoSpace extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               LevelIndecator(ctrl: ctrl),
-              Spacer(
+              const Spacer(
                 flex: 1,
               ),
               Obx(
                 () => GestureDetector(
                   onTap: () {
-                    Get.to(() => PomoTasksOrderInput());
+                    Get.to(() => const PomoTasksOrderInput());
                   },
                   child: ctrl.pomoActiveTask.value != ""
                       ? PomoTaskName(pctrl: ctrl)
@@ -70,10 +70,10 @@ class PomoSpace extends StatelessWidget {
               ),
               PomodoroSessionView(pctrl: ctrl),
               PomoClock(ctrl: ctrl),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               PomoControls(ctrl: ctrl),
-              SizedBox(height: 10),
-              Spacer(flex: 2),
+              const SizedBox(height: 10),
+              const Spacer(flex: 2),
               PomoCustomizers(ctrl: ctrl),
               // DownwordScroller(),
             ],
@@ -387,7 +387,7 @@ class PomoSpaceControllers extends GetxController {
     } else {
       setStatus(PomodoroStatus.runningPomodoro);
     }
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) async {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) async {
       currentTimeCount.value++;
       update();
 
@@ -396,9 +396,9 @@ class PomoSpaceControllers extends GetxController {
         currentSessions.value++;
         update();
         Get.snackbar("You have done a lot!", "Go and take a break",
-            duration: Duration(seconds: 5),
-            padding: EdgeInsets.all(8),
-            margin: EdgeInsets.all(8),
+            duration: const Duration(seconds: 5),
+            padding: const EdgeInsets.all(8),
+            margin: const EdgeInsets.all(8),
             // backgroundColor: MyColors.blue.withOpacity(.5),
             snackStyle: SnackStyle.FLOATING,
             isDismissible: true);
@@ -419,7 +419,7 @@ class PomoSpaceControllers extends GetxController {
       ctrl.update();
     } else {
       ctrl.setStatus(PomodoroStatus.runningShortBreak);
-      ctrl._timer = Timer.periodic(Duration(seconds: 1), (timer) async {
+      ctrl._timer = Timer.periodic(const Duration(seconds: 1), (timer) async {
         ctrl.currentTimeCount.value++;
         ctrl.update();
         if (ctrl.currentTimeCount.value == ctrl.currentSettedBreakTime.value) {
@@ -427,9 +427,9 @@ class PomoSpaceControllers extends GetxController {
           Get.snackbar(
             "Break time is over.",
             "Go and work harder",
-            duration: Duration(seconds: 5),
-            padding: EdgeInsets.all(8),
-            margin: EdgeInsets.all(8),
+            duration: const Duration(seconds: 5),
+            padding: const EdgeInsets.all(8),
+            margin: const EdgeInsets.all(8),
             // backgroundColor: MyColors.blue.withOpacity((.5)),
             snackStyle: SnackStyle.FLOATING,
             isDismissible: true,
@@ -465,12 +465,13 @@ class PomoSpaceControllers extends GetxController {
 ////////////////////// Pause and Stop //////////////////////
   void pause() {
     Wakelock.disable();
-    if (currentStatus.value == PomodoroStatus.runningPomodoro)
+    if (currentStatus.value == PomodoroStatus.runningPomodoro) {
       setStatus(PomodoroStatus.pausedPomodoro);
-    else if (currentStatus.value == PomodoroStatus.extraPomodoro)
+    } else if (currentStatus.value == PomodoroStatus.extraPomodoro) {
       setStatus(PomodoroStatus.pausedExtraPomodoro);
-    else
+    } else {
       print("Pause not found for" + currentStatus.toString());
+    }
   }
 
   void giveUp() {
@@ -543,25 +544,25 @@ class PomoSpaceControllers extends GetxController {
               height: 5.h,
             ),
             Container(
-                margin: EdgeInsets.all(2),
+                margin: const EdgeInsets.all(2),
                 alignment: Alignment.center,
                 child: Image.asset("assets/img/treasure_open.png", width: 100)),
           ],
         ),
       ),
-      contentPadding: EdgeInsets.all(0),
+      contentPadding: const EdgeInsets.all(0),
       actions: [
         Center(
           child: MyIconButton(
                   onPressed: () {
                     update();
-                    Get.to(() => HomeScreen());
+                    Get.to(() => const HomeScreen());
                   },
-                  icon: Icon(Icons.check, color: MyColors.yellow))
+                  icon: const Icon(Icons.check, color: MyColors.yellow))
               .cicle(25, MyColors.yellow.withOpacity(.2)),
         )
       ],
-      semanticLabel: '', titlePadding: EdgeInsets.all(8),
+      semanticLabel: '', titlePadding: const EdgeInsets.all(8),
       // actionsPadding: EdgeInsets.all(20),
     ));
   }

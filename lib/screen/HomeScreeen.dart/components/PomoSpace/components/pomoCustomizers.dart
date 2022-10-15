@@ -28,7 +28,7 @@ class PomoCustomizers extends StatelessWidget {
                             pctrl: ctrl,
                           ));
                 },
-                icon: Icon(Iconsax.watch))
+                icon: const Icon(Iconsax.watch))
             .clicky(),
         MyIconButton(
                 onPressed: () {
@@ -37,31 +37,31 @@ class PomoCustomizers extends StatelessWidget {
                       context: context,
                       builder: (context) => MyMusicPlayer(pctrl: ctrl));
                 },
-                icon: Icon(Iconsax.music))
+                icon: const Icon(Iconsax.music))
             .clicky(),
         MyIconButton(
                 onPressed: () {
-                  Get.to(() => ComingSoonScreen());
+                  Get.to(() => const ComingSoonScreen());
                 },
-                icon: Icon(Iconsax.shop))
+                icon: const Icon(Iconsax.shop))
             .clicky(),
         MyIconButton(
                 onPressed: () {
-                  Get.to(() => PomoTasksOrderInput());
+                  Get.to(() => const PomoTasksOrderInput());
                 },
-                icon: Icon(Iconsax.task_square))
+                icon: const Icon(Iconsax.task_square))
             .clicky(),
         MyIconButton(
                 onPressed: () {
-                  Get.to(() => RecordScreen());
+                  Get.to(() => const RecordScreen());
                 },
-                icon: Icon(Iconsax.chart_21))
+                icon: const Icon(Iconsax.chart_21))
             .clicky(),
         MyIconButton(
                 onPressed: () {
-                  Get.to(() => SettingScreen());
+                  Get.to(() => const SettingScreen());
                 },
-                icon: Icon(Iconsax.setting_2))
+                icon: const Icon(Iconsax.setting_2))
             .clicky(),
       ],
     );

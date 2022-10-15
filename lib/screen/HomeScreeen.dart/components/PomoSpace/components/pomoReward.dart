@@ -15,12 +15,12 @@ class PomoRewards extends StatelessWidget {
     return Row(
       children: [
         Container(
-            padding: EdgeInsets.all(2),
+            padding: const EdgeInsets.all(2),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                      margin: EdgeInsets.symmetric(vertical: 16, horizontal: 3),
+                      margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 3),
                       child: Image.asset("assets/icons/coin.png"), height: 20,),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 2),
@@ -28,14 +28,14 @@ class PomoRewards extends StatelessWidget {
                         () => MyText(ctrl.pomoCoin.value.toString()).text(20)),
                   ),
                 ])),
-        SizedBox(width: 5),
+        const SizedBox(width: 5),
         Container(
-            padding: EdgeInsets.all(2),
+            padding: const EdgeInsets.all(2),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                      margin: EdgeInsets.symmetric(vertical: 16, horizontal: 3),
+                      margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 3),
                       child: Image.asset("assets/icons/gem.png"), height: 20,),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 2),
@@ -43,7 +43,7 @@ class PomoRewards extends StatelessWidget {
                         () => MyText(ctrl.pomoGem.value.toString()).text(20)),
                   ),
                 ])),
-        SizedBox(width: 5),
+        const SizedBox(width: 5),
         // Container(
         //     padding: EdgeInsets.all(2),
         //     child: Row(

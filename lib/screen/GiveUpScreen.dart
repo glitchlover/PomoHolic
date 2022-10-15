@@ -17,23 +17,23 @@ class GiveUpScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
           alignment: Alignment.center,
-          margin: EdgeInsets.all(5),
+          margin: const EdgeInsets.all(5),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Spacer(),
+              const Spacer(),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset("assets/img/crying.png", scale: 3),
               ),
-              Spacer(),
+              const Spacer(),
               MyText("Oh no! You will loose xp...").heading3(),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               MyText("Do yo really want to give up?").textt(),
-              Spacer(),
+              const Spacer(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -56,7 +56,7 @@ class GiveUpScreen extends StatelessWidget {
                         ctrl.pomoExp.value = exp;
                         ctrl.userDataInstance.updateUserData(exp: exp);
                         ctrl.setStatus(PomodoroStatus.normal);
-                        Get.off(() => HomeScreen());
+                        Get.off(() => const HomeScreen());
                       },
                       child: MyText("Yes").text(30)),
                   TextButton(
@@ -66,7 +66,7 @@ class GiveUpScreen extends StatelessWidget {
                       child: MyText("No").text(30))
                 ],
               ),
-              Spacer(),
+              const Spacer(),
             ],
           )),
     );

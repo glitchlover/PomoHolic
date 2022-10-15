@@ -8,7 +8,7 @@ class DownwordScroller extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top:40.0),
-      child: IconButton(onPressed: () {}, icon: Icon(Iconsax.arrow_down_1)),
+      child: IconButton(onPressed: () {}, icon: const Icon(Iconsax.arrow_down_1)),
     );
   }
 }

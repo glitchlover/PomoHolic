@@ -23,12 +23,12 @@ class MyAppBar extends AppBar {
       leading: !isHomeScreen
           ? MyIconButton(
               onPressed: () {
-                Get.off(() => HomeScreen());
+                Get.off(() => const HomeScreen());
               },
-              icon: Icon(Icons.arrow_back))
+              icon: const Icon(Icons.arrow_back))
           : null,
       title: text==null?Container(
-        constraints: BoxConstraints(maxHeight: 56),
+        constraints: const BoxConstraints(maxHeight: 56),
         alignment: Alignment.center,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,

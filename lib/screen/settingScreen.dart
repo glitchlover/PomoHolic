@@ -14,7 +14,7 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: MyAppBar(action: [], text: "Setting ⚙️").paint(),
+        appBar: MyAppBar(action: const [], text: "Setting ⚙️").paint(),
         body: GetBuilder<SettingScreenController>(
             init: SettingScreenController(),
             initState: (_) {},
@@ -90,16 +90,16 @@ class SettingScreen extends StatelessWidget {
 themeDialog(BuildContext context) {
   SettingScreenController ctrl = Get.put(SettingScreenController());
   return Get.dialog(AlertDialog(
-    content: Container(
+    content: SizedBox(
         height: Get.height - 200,
         width: Get.width - 50,
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             MyText("Choose Theme").heading3(),
-            Divider(
+            const Divider(
               height: 50,
             ),
             Column(

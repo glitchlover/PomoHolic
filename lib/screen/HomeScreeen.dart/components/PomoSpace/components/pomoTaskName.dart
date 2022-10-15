@@ -25,7 +25,7 @@ class TaskName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: MyColors.primaryWhite.withOpacity(.2),
@@ -37,7 +37,7 @@ class TaskName extends StatelessWidget {
           Icon(Icons.circle,
               size: 12,
               color: MyColors.primaryWhite.withOpacity(.3)),
-          SizedBox(width: 5),
+          const SizedBox(width: 5),
           AutoSizeText(pctrl.pomoActiveTask.value, style: MyText.textThemePoppins(MyColors.primaryWhite.withOpacity(.9), FontWeight.w500, 16))
         ],
       ),
@@ -54,7 +54,7 @@ class TagName extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 20,
-      padding: EdgeInsets.symmetric(horizontal: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
         // color: MyColors.primaryWhite.withOpacity(.3),
@@ -63,8 +63,8 @@ class TagName extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Iconsax.tag_cross, size: 16),
-          SizedBox(width: 2),
+          const Icon(Iconsax.tag_cross, size: 16),
+          const SizedBox(width: 2),
           MyText('Hello world!').textt(),
         ],
       ),

@@ -10,7 +10,7 @@ class MyThemes{
         primaryColor: MyColors.purple,
         primaryColorDark: MyColors.darken(Get.theme.primaryColor, 80),
         secondaryHeaderColor: MyColors.pinkDark,
-        floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: MyColors.pinkDark),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(backgroundColor: MyColors.pinkDark),
         backgroundColor: MyColors.darken(MyColors.purple, 70),
         scaffoldBackgroundColor: MyColors.darken(MyColors.purple, 70),
         dialogBackgroundColor: MyColors.darken(MyColors.purple, 60),
@@ -27,7 +27,7 @@ class MyThemes{
           buttonColor: MyColors.purple,
           splashColor: MyColors.darken(MyColors.purple, 90)
         ),
-        toggleableActiveColor: Color.fromARGB(255, 252, 113, 143),
+        toggleableActiveColor: const Color.fromARGB(255, 252, 113, 143),
       );
   }
   ThemeData theme1(){

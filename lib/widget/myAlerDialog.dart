@@ -19,8 +19,7 @@ class MyAlertDialog extends StatelessWidget {
     this.contentPadding = const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 24.0),
     required this.actions,
     required this.semanticLabel,
-  }) : assert(contentPadding != null),
-       super(key: key);
+  }) : super(key: key);
 
   /// The (optional) title of the dialog is displayed in a large font at the top
   /// of the dialog.
@@ -88,11 +87,11 @@ class MyAlertDialog extends StatelessWidget {
     String label = semanticLabel;
 
     if (title != null) {
-      children.add(new Padding(
+      children.add(Padding(
         padding: titlePadding,
-        child: new DefaultTextStyle(
+        child: DefaultTextStyle(
           style: MyText.textThemePoppins(MyColors.primaryWhite, FontWeight.w400, 16),
-          child: new Semantics(child: title, namesRoute: true),
+          child: Semantics(child: title, namesRoute: true),
         ),
       ));
     } else {
@@ -117,39 +116,34 @@ class MyAlertDialog extends StatelessWidget {
       }
     }
 
-    if (content != null) {
-      children.add(new Flexible(
-        child: new Padding(
-          padding: contentPadding,
-          child: new DefaultTextStyle(
-            style: Theme.of(context).textTheme.bodyText2!,
-            child: content,
-          ),
+    children.add(Flexible(
+      child: Padding(
+        padding: contentPadding,
+        child: DefaultTextStyle(
+          style: Theme.of(context).textTheme.bodyText2!,
+          child: content,
         ),
-      ));
-    }
+      ),
+    ));
 
-    if (actions != null) {
-      children.add(new ButtonTheme(
-        child: new ButtonBar(
-          children: actions,
-        ),
-      ));
-    }
+    children.add(ButtonTheme(
+      child: ButtonBar(
+        children: actions,
+      ),
+    ));
 
-    Widget dialogChild = new Column(
+    Widget dialogChild = Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: children,
     );
 
-    if (label != null)
-      dialogChild = new Semantics(
-        namesRoute: true,
-        label: label,
-        child: dialogChild
-      );
+    dialogChild = Semantics(
+      namesRoute: true,
+      label: label,
+      child: dialogChild
+    );
 
-    return new Dialog(child: dialogChild);
+    return Dialog(child: dialogChild);
   }
 }

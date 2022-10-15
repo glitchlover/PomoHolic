@@ -120,11 +120,11 @@ class Datum {
     factory Datum.fromMap(Map<String, dynamic> json) => Datum(
         challenge: Challenge.fromMap(json["challenge"]),
         group: DatumGroup.fromMap(json["group"]),
-        up: json["up"] == null ? null : json["up"],
-        down: json["down"] == null ? null : json["down"],
-        counterUp: json["counterUp"] == null ? null : json["counterUp"],
-        counterDown: json["counterDown"] == null ? null : json["counterDown"],
-        frequency: json["frequency"] == null ? null : json["frequency"],
+        up: json["up"],
+        down: json["down"],
+        counterUp: json["counterUp"],
+        counterDown: json["counterDown"],
+        frequency: json["frequency"],
         history: json["history"] == null ? null : List<History>.from(json["history"].map((x) => History.fromMap(x))),
         type: json["type"],
         notes: json["notes"],
@@ -140,30 +140,30 @@ class Datum {
         text: json["text"],
         userId: json["userId"],
         datumId: json["id"],
-        alias: json["alias"] == null ? null : json["alias"],
+        alias: json["alias"],
         repeat: json["repeat"] == null ? null : Repeat.fromMap(json["repeat"]),
-        everyX: json["everyX"] == null ? null : json["everyX"],
-        streak: json["streak"] == null ? null : json["streak"],
+        everyX: json["everyX"],
+        streak: json["streak"],
         nextDue: json["nextDue"] == null ? null : List<String>.from(json["nextDue"].map((x) => x)),
-        yesterDaily: json["yesterDaily"] == null ? null : json["yesterDaily"],
-        completed: json["completed"] == null ? null : json["completed"],
-        collapseChecklist: json["collapseChecklist"] == null ? null : json["collapseChecklist"],
+        yesterDaily: json["yesterDaily"],
+        completed: json["completed"],
+        collapseChecklist: json["collapseChecklist"],
         startDate: json["startDate"] == null ? null : DateTime.parse(json["startDate"]),
         daysOfMonth: json["daysOfMonth"] == null ? null : List<dynamic>.from(json["daysOfMonth"].map((x) => x)),
         weeksOfMonth: json["weeksOfMonth"] == null ? null : List<dynamic>.from(json["weeksOfMonth"].map((x) => x)),
         checklist: json["checklist"] == null ? null : List<Checklist>.from(json["checklist"].map((x) => Checklist.fromMap(x))),
-        isDue: json["isDue"] == null ? null : json["isDue"],
+        isDue: json["isDue"],
         date: json["date"] == null ? null : DateTime.parse(json["date"]),
     );
 
     Map<String, dynamic> toMap() => {
         "challenge": challenge.toMap(),
         "group": group.toMap(),
-        "up": up == null ? null : up,
-        "down": down == null ? null : down,
-        "counterUp": counterUp == null ? null : counterUp,
-        "counterDown": counterDown == null ? null : counterDown,
-        "frequency": frequency == null ? null : frequency,
+        "up": up,
+        "down": down,
+        "counterUp": counterUp,
+        "counterDown": counterDown,
+        "frequency": frequency,
         "history": history == null ? null : List<dynamic>.from(history!.map((x) => x.toMap())),
         "type": type,
         "notes": notes,
@@ -179,19 +179,19 @@ class Datum {
         "text": text,
         "userId": userId,
         "id": datumId,
-        "alias": alias == null ? null : alias,
+        "alias": alias,
         "repeat": repeat == null ? null : repeat!.toMap(),
-        "everyX": everyX == null ? null : everyX,
-        "streak": streak == null ? null : streak,
+        "everyX": everyX,
+        "streak": streak,
         "nextDue": nextDue == null ? null : List<dynamic>.from(nextDue!.map((x) => x)),
-        "yesterDaily": yesterDaily == null ? null : yesterDaily,
-        "completed": completed == null ? null : completed,
-        "collapseChecklist": collapseChecklist == null ? null : collapseChecklist,
+        "yesterDaily": yesterDaily,
+        "completed": completed,
+        "collapseChecklist": collapseChecklist,
         "startDate": startDate == null ? null : startDate!.toIso8601String(),
         "daysOfMonth": daysOfMonth == null ? null : List<dynamic>.from(daysOfMonth!.map((x) => x)),
         "weeksOfMonth": weeksOfMonth == null ? null : List<dynamic>.from(weeksOfMonth!.map((x) => x)),
         "checklist": checklist == null ? null : List<dynamic>.from(checklist!.map((x) => x.toMap())),
-        "isDue": isDue == null ? null : isDue,
+        "isDue": isDue,
         "date": date == null ? null : date!.toIso8601String(),
     };
 }
@@ -212,15 +212,15 @@ class Challenge {
     String toJson() => json.encode(toMap());
 
     factory Challenge.fromMap(Map<String, dynamic> json) => Challenge(
-        taskId: json["taskId"] == null ? null : json["taskId"],
-        id: json["id"] == null ? null : json["id"],
-        shortName: json["shortName"] == null ? null : json["shortName"],
+        taskId: json["taskId"],
+        id: json["id"],
+        shortName: json["shortName"],
     );
 
     Map<String, dynamic> toMap() => {
-        "taskId": taskId == null ? null : taskId,
-        "id": id == null ? null : id,
-        "shortName": shortName == null ? null : shortName,
+        "taskId": taskId,
+        "id": id,
+        "shortName": shortName,
     };
 }
 
@@ -332,19 +332,19 @@ class History {
     factory History.fromMap(Map<String, dynamic> json) => History(
         date: json["date"],
         value: json["value"].toDouble(),
-        scoredUp: json["scoredUp"] == null ? null : json["scoredUp"],
-        scoredDown: json["scoredDown"] == null ? null : json["scoredDown"],
-        isDue: json["isDue"] == null ? null : json["isDue"],
-        completed: json["completed"] == null ? null : json["completed"],
+        scoredUp: json["scoredUp"],
+        scoredDown: json["scoredDown"],
+        isDue: json["isDue"],
+        completed: json["completed"],
     );
 
     Map<String, dynamic> toMap() => {
         "date": date,
         "value": value,
-        "scoredUp": scoredUp == null ? null : scoredUp,
-        "scoredDown": scoredDown == null ? null : scoredDown,
-        "isDue": isDue == null ? null : isDue,
-        "completed": completed == null ? null : completed,
+        "scoredUp": scoredUp,
+        "scoredDown": scoredDown,
+        "isDue": isDue,
+        "completed": completed,
     };
 }
 

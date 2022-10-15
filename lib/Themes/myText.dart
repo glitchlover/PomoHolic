@@ -8,7 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 class MyText extends AutoSizeText {
   MyText(this.data, {this.fontWeight, this.fontSize, this.color}) : super('');
 
-  Color? color = Color.fromARGB(255, 189, 189, 190);
+  Color? color = const Color.fromARGB(255, 189, 189, 190);
   double? fontSize = GFSize.SMALL;
   FontWeight? fontWeight = FontWeight.normal;
 

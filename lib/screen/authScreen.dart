@@ -15,6 +15,7 @@ class AuthScreen extends StatelessWidget {
   late TextEditingController apiController = TextEditingController();
   late TextEditingController userIdController = TextEditingController();
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
@@ -28,12 +29,12 @@ class AuthScreen extends StatelessWidget {
               Center(
                 child: AnimatedContainer(
                   height: Get.width/2,
-                  duration: Duration(milliseconds: 10),
+                  duration: const Duration(milliseconds: 10),
                   child:
                       Image.asset("assets/img/pomobase.png", fit: BoxFit.contain),
                 ),
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               MyTextField(
                 label: "Habitica API Token",
                 helperTxt: "Find Api key from habitica's setting pane",
@@ -56,8 +57,8 @@ class AuthScreen extends StatelessWidget {
                           child: MyText("Connect").textt(),
                         ),
                         icon: isLoading.value
-                            ? CircularProgressIndicator()
-                            : Icon(Iconsax.link),
+                            ? const CircularProgressIndicator()
+                            : const Icon(Iconsax.link),
                         style: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all<Color>(MyColors.green),
@@ -71,10 +72,10 @@ class AuthScreen extends StatelessWidget {
                             Get.snackbar(
                               "Error! ",
                               connectionInfo,
-                              icon: Icon(Iconsax.wifi),
+                              icon: const Icon(Iconsax.wifi),
                               backgroundColor: MyColors.pink.withOpacity(0.3),
-                              margin: EdgeInsets.all(50),
-                              duration: Duration(seconds: 2)
+                              margin: const EdgeInsets.all(50),
+                              duration: const Duration(seconds: 2)
                             );
                             return;
                           }
@@ -82,10 +83,10 @@ class AuthScreen extends StatelessWidget {
                             isLoading.value = false;
                             Get.snackbar("Error", connectionInfo,
                                 icon:
-                                    Icon(Iconsax.warning_2, color: Colors.red),
+                                    const Icon(Iconsax.warning_2, color: Colors.red),
                                 backgroundColor: MyColors.pink.withOpacity(0.3),
-                                margin: EdgeInsets.all(50),
-                                duration: Duration(seconds: 2));
+                                margin: const EdgeInsets.all(50),
+                                duration: const Duration(seconds: 2));
                             return;
                           }
 

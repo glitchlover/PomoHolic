@@ -11,7 +11,7 @@ import 'package:pomotica/widget/myAppBar.dart';
 import 'package:pomotica/widget/myTaskInput.dart';
 
 class PomoTasksOrderInput extends StatelessWidget {
-  PomoTasksOrderInput({Key? key}) : super(key: key);
+  const PomoTasksOrderInput({Key? key}) : super(key: key);
 
   void addTaskDialog({bool edit = false, int? id}) {
     Get.dialog(AlertDialog(
@@ -63,11 +63,11 @@ class PomoTasksOrderInput extends StatelessWidget {
                   //     // ctrl.dueDate?.value = DateTime.parse(value);
                   //   },
                   // ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Container(
-                    margin: EdgeInsets.all(10.0),
+                    margin: const EdgeInsets.all(10.0),
                     child: TextButton(
                       onPressed: () async {
                         Get.back();
@@ -92,17 +92,17 @@ class PomoTasksOrderInput extends StatelessWidget {
         onPressed: () {
           addTaskDialog();
         },
-        child: Icon(
+        child: const Icon(
           Icons.add,
           color: Colors.white,
         ),
         // backgroundColor: MyColors.pinkDark,
       ),
       appBar: MyAppBar(
-        action: [],
+        action: const [],
       ).paint(),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.symmetric(vertical: 20),
         child: GetBuilder<PomoTasksOrderInputController>(
             init: PomoTasksOrderInputController(),
             initState: (_) {},
@@ -111,7 +111,7 @@ class PomoTasksOrderInput extends StatelessWidget {
               if (value.tasks.isEmpty) {
                 return Center(
                     child: MyText("Looks like you have no tasks!",
-                            color: Color.fromARGB(155, 157, 167, 171))
+                            color: const Color.fromARGB(155, 157, 167, 171))
                         .text(20));
               }
               return Padding(
@@ -119,7 +119,7 @@ class PomoTasksOrderInput extends StatelessWidget {
                   child: ListView.builder(
                     shrinkWrap: true,
                     primary: false,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (builder, index) => HabiticaCard(
                       title: value.tasksOrder[index].toString(),
                       id: value.taskId[index],

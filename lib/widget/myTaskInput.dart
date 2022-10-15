@@ -4,7 +4,7 @@ import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/Themes/myText.dart';
 
 class MyTaskInput extends StatelessWidget {
-  MyTaskInput({
+  const MyTaskInput({
     Key? key,
     required this.title,
     this.txtctrl,
@@ -30,10 +30,10 @@ class MyTaskInput extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                children: [SizedBox(width: 5), MyText(title).text()],
+                children: [const SizedBox(width: 5), MyText(title).text()],
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 6),
+                padding: const EdgeInsets.symmetric(horizontal: 6),
                 decoration: BoxDecoration(
                   // border: Border.all(color: MyColors.dividerColor, width: 1),
                   borderRadius: BorderRadius.circular(12),

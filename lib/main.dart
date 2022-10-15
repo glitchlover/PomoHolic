@@ -17,11 +17,11 @@ main() async {
   await MyIsar.init();
   await GetStorage.init("reward");
   await MyGetStorage().init();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   // var data = Future.wait([UserDataService().fetchTaskModel()]);
 
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
               theme: regularTheme,
               darkTheme: darkTheme,
               themeMode: ThemeMode.light,
-              home: HomeScreen(),
+              home: const HomeScreen(),
               );
         });
   }

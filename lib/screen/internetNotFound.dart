@@ -19,7 +19,7 @@ class InternetNotFoundScreen extends StatelessWidget {
       body: Center(
           child: Column(
         children: [
-          Spacer(),
+          const Spacer(),
           IconButton(
               onPressed: () {
                 var auth = HabiticaAuthServices.getAuth();
@@ -27,7 +27,7 @@ class InternetNotFoundScreen extends StatelessWidget {
                 if (auth == "Not Connected") {
                   Get.back();
                 } else if (auth == "Error") {
-                  Get.off(() => SomethingWentWrongScreen());
+                  Get.off(() => const SomethingWentWrongScreen());
                 } else {
                   print("snapshot: " +
                       (auth.toString().contains("Error")
@@ -40,12 +40,12 @@ class InternetNotFoundScreen extends StatelessWidget {
                   var data = UserDataService()
                       .habiticaToPomoticaTaskModel()
                       .asStream();
-                  Get.off(() => HomeScreen());
+                  Get.off(() => const HomeScreen());
                 }
               },
-              icon: Icon(Iconsax.repeat)),
+              icon: const Icon(Iconsax.repeat)),
           MyText("Internet Not Found").heading2(),
-          Spacer(),
+          const Spacer(),
         ],
       )),
     );

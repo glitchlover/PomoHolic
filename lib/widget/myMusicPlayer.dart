@@ -5,7 +5,6 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:getwidget/components/checkbox/gf_checkbox.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:path_provider/path_provider.dart';
@@ -19,7 +18,7 @@ import '../Themes/myText.dart';
 
 class MyMusicPlayer extends StatelessWidget {
   final PomoSpaceControllers pctrl;
-  MyMusicPlayer({Key? key, required this.pctrl}) : super(key: key);
+  const MyMusicPlayer({Key? key, required this.pctrl}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +38,7 @@ class MyMusicPlayer extends StatelessWidget {
                         icon: Obx(() => Icon(ctrl.isPlaying.value
                             ? Iconsax.volume_cross
                             : Iconsax.volume_mute))),
-                    Spacer(),
+                    const Spacer(),
                     MyIconButton(
                         onPressed: () async {
                           !pctrl.canPlay.value
@@ -47,11 +46,11 @@ class MyMusicPlayer extends StatelessWidget {
                               : null;
                           Get.back();
                         },
-                        icon: Icon(Icons.close))
+                        icon: const Icon(Icons.close))
                   ],
                 ),
-                SizedBox(height: 20),
-                Container(
+                const SizedBox(height: 20),
+                SizedBox(
                     width: Get.width - 50,
                     height: Get.height - 200,
                     child: ListView.separated(
@@ -59,7 +58,7 @@ class MyMusicPlayer extends StatelessWidget {
                         itemCount: ctrl.musics.length,
                         separatorBuilder: (BuildContext context, int index) {
                           // print(ctrl.musics.length);
-                          return SizedBox(height: 20);
+                          return const SizedBox(height: 20);
                         },
                         itemBuilder: (BuildContext context, int index) {
                           return MusicTile(
@@ -101,7 +100,7 @@ class MusicTile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Obx(() => GFCheckbox(
-                            activeIcon: Icon(Icons.circle, size: 10),
+                            activeIcon: const Icon(Icons.circle, size: 10),
                             type: GFCheckboxType.circle,
                             activeBgColor: MyColors.blue,
                             activeBorderColor: MyColors.blue,
@@ -113,7 +112,7 @@ class MusicTile extends StatelessWidget {
                             value: ctrl.actives[index],
                             size: 15,
                           )),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       SizedBox(
@@ -182,6 +181,7 @@ class MyMusicPlayerController extends GetxController {
         ..pause()
         ..dispose();
     });
+
     isPlaying.value = false;
     update();
     Get.delete<MyMusicPlayerController>();

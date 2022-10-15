@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pomotica/Themes/myColors.dart';
@@ -38,11 +37,11 @@ class PomoControls extends StatelessWidget {
         Obx(
           () => ctrl.canGoNext.value ? nextButton() : Container(),
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Obx(() => ctrl.canPaused.value ? pauseButton() : Container()),
         Obx(() => ctrl.canContinue.value ? continueButton() : Container()),
         Obx(() => ctrl.canStart.value ? startButton() : Container()),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Obx(() => ctrl.canGiveUp.value ? giveUpButton() : Container()),
       ],
     );
@@ -69,7 +68,7 @@ class PomoControls extends StatelessWidget {
           ctrl.giveUp();
           Get.to(() => GiveUpScreen(ctrl: ctrl));
         },
-        icon: Icon(Icons.stop),
+        icon: const Icon(Icons.stop),
         label: MyText("Give Up!").textt());
   }
 
@@ -81,7 +80,7 @@ class PomoControls extends StatelessWidget {
         onPressed: () {
           ctrl.startTimer();
         },
-        icon: Icon(Icons.play_arrow_rounded),
+        icon: const Icon(Icons.play_arrow_rounded),
         label: MyText("Start").textt());
   }
 
@@ -93,7 +92,7 @@ class PomoControls extends StatelessWidget {
         onPressed: () {
           ctrl.pause();
         },
-        icon: Icon(Icons.pause),
+        icon: const Icon(Icons.pause),
         label: MyText("Pause").textt());
   }
 
@@ -105,7 +104,7 @@ class PomoControls extends StatelessWidget {
       onPressed: () {
         ctrl.next();
       },
-      icon: Icon(Icons.skip_next),
+      icon: const Icon(Icons.skip_next),
       label: MyText("Next").textt(),
     );
   }
@@ -118,7 +117,7 @@ class PomoControls extends StatelessWidget {
       onPressed: () {
         ctrl.startTimer();
       },
-      icon: Icon(Icons.replay_rounded),
+      icon: const Icon(Icons.replay_rounded),
       label: MyText("Continue").textt(),
     );
   }

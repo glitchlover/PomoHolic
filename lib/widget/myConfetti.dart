@@ -42,7 +42,7 @@ class _MyConfettiState extends State<MyConfetti>
     });
     // Animations
 
-    animCtrl = AnimationController(vsync: this, duration: Duration(seconds: 10))
+    animCtrl = AnimationController(vsync: this, duration: const Duration(seconds: 10))
       ..repeat();
     animation = Tween<double>(begin: 0, end: 300).animate(animCtrl)
       ..addStatusListener((status) {
@@ -50,12 +50,12 @@ class _MyConfettiState extends State<MyConfetti>
         }
       })
       ..addListener(() {
-        particles.forEach((p) {
+        for (var p in particles) {
           setState(() {
             p.position = Offset(p.position.dx + animation.value * p.theta,
                 p.position.dy + animation.value);
           });
-        });
+        }
       });
     animCtrl.forward();
   }
@@ -100,7 +100,7 @@ class MyPainterCanvas extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    this.particles.forEach((p) {
+    for (var p in particles) {
       //Update
       var velocity = polarToCartesian(p.speed, p.theta);
       var dx = p.position.dx + velocity.dx;
@@ -123,7 +123,7 @@ class MyPainterCanvas extends CustomPainter {
       // canvas.transform(
       //   Float64List(16)
       // );
-    });
+    }
   }
 
   @override

@@ -19,7 +19,7 @@ class DocumentServices {
   ////////////////////////___constructor___////////////////////////
   DocumentServices({required this.db}) {
     setLocaPath();
-    Timer(Duration(milliseconds: 1000), () {
+    Timer(const Duration(milliseconds: 1000), () {
       makeMasterDbFolder();
       makeDbFile();
     });
@@ -46,14 +46,14 @@ class DocumentServices {
 
   ////////////////////////saving and retriving auth/////////////////////
   saveAuth(AuthModel authModel) async {
-    await Future.delayed(Duration(milliseconds: 1000));
+    await Future.delayed(const Duration(milliseconds: 1000));
     var contents = authModel.toJson();
     print("saveAuth: " + contents);
     dbFile.writeAsStringSync(contents);
   }
 
   Future<String> retriveAuth() async {
-    await Future.delayed(Duration(milliseconds: 1000));
+    await Future.delayed(const Duration(milliseconds: 1000));
     var content = json.decode(dbFile.readAsStringSync());
 
     var authModel = AuthModel(
@@ -72,14 +72,14 @@ class DocumentServices {
   }
 
   saveUser(HabiticaUserModel habiticaUserModel) async {
-    await Future.delayed(Duration(milliseconds: 1000));
+    await Future.delayed(const Duration(milliseconds: 1000));
     var contents = habiticaUserModel.toJson();
     print("saveUserData: " + contents.length.toString());
     dbFile.writeAsStringSync(contents);
   }
 
   Future<HabiticaUserModel> retriveUser() async {
-    await Future.delayed(Duration(milliseconds: 1000));
+    await Future.delayed(const Duration(milliseconds: 1000));
     var contents = dbFile.readAsStringSync();
     // print("retriveUser: " + contents);
     HabiticaUserModel habiticaUserModel =
@@ -89,14 +89,14 @@ class DocumentServices {
   }
 
   saveTasksOrder(HabiticaTaskModel tasksOrderModel) async{
-    await Future.delayed(Duration(milliseconds: 1000));
+    await Future.delayed(const Duration(milliseconds: 1000));
     var contents = tasksOrderModel.toJson();
     print("saveUserData: " + contents.length.toString());
     dbFile.writeAsStringSync(contents);
   }
 
   Future<HabiticaTaskModel> retriveTasksOrder() async {
-    await Future.delayed(Duration(milliseconds: 1000));
+    await Future.delayed(const Duration(milliseconds: 1000));
     var contents = dbFile.readAsStringSync();
     // print("retriveUser: " + contents);
     HabiticaTaskModel habiticaTaskModel =

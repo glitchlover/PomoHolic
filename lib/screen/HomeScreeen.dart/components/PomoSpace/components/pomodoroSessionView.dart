@@ -14,7 +14,7 @@ class PomodoroSessionView extends StatelessWidget {
     // var icons = ctrl.icons;
     return Builder(builder: (context) {
       return Container(
-        margin: EdgeInsets.all(4),
+        margin: const EdgeInsets.all(4),
         child: Obx(() => Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -23,7 +23,7 @@ class PomodoroSessionView extends StatelessWidget {
                 //     totalSteps: pctrl.currentSettedSessions.value)),
                 Image.asset("assets/img/key_found(2).png",
                     height: 28, width: 28),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 MyText(pctrl.currentSessions.value.toString()).text(20),
                 MyText("/"),
                 MyText(pctrl.currentSettedSessions.value.toString()).text(20),

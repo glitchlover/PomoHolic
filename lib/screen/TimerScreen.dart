@@ -17,7 +17,7 @@ class TimerScreen extends StatelessWidget {
               onPressed: () {
                 // Get.off(() => ExitScreen(ctrl: ctrl));
               },
-              icon: Icon(Icons.exit_to_app)),
+              icon: const Icon(Icons.exit_to_app)),
           // disableBackButton: false,
           actions: [PomodoroSessionView(pctrl: ctrl)],
         ),

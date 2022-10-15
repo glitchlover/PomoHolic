@@ -8,7 +8,7 @@ class ComingSoonScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(action: [],).paint(),
+      appBar: MyAppBar(action: const [],).paint(),
       body: Center(
         child: MyText("This feature will come soon").text(20),
       )

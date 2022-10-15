@@ -4,6 +4,7 @@ class MyCircleAvatar extends CircleAvatar {
   final Image? img;
   final IconData icon;
   final Color color;
+  @override
   final double radius;
 
   const MyCircleAvatar({

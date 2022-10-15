@@ -11,7 +11,7 @@ class HabiticaAuthServices {
   var token = [];
   String _apiKey = "";
   String _userId = "";
-  String _xclient = "${MyHabiticaAuth.userId}+pomotica";
+  final String _xclient = "${MyHabiticaAuth.userId}+pomotica";
   late AuthModel authModel;
 
   var habiticaUri = Uri(
@@ -50,7 +50,7 @@ class HabiticaAuthServices {
       DocumentServices(db: "habitica_user").saveUser(habiticaUserModel);
       // print("getHabiticaConnection:" + res.body);
       return (res.body);
-    } on SocketException catch (e) {
+    } on SocketException {
       return "Not Connected";
     }
   }
@@ -62,7 +62,7 @@ class HabiticaAuthServices {
   }
 
   static getAuth() async {
-    await Future.delayed(Duration(milliseconds: 1000));
+    await Future.delayed(const Duration(milliseconds: 1000));
     var retriveAuth = await DocumentServices(db: "auth").retriveAuth();
     print("getAuth() : " + retriveAuth);
     if (retriveAuth.contains("Error")) {

@@ -1,9 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:pomotica/Themes/myText.dart';
 import 'package:pomotica/database/pomoticaRecordCrud.dart';
@@ -11,7 +8,7 @@ import 'package:pomotica/model/pomoticaRecordModel.dart';
 import 'package:pomotica/widget/myAppBar.dart';
 
 class RecordScreen extends StatefulWidget {
-  RecordScreen({Key? key}) : super(key: key);
+  const RecordScreen({Key? key}) : super(key: key);
 
   @override
   State<RecordScreen> createState() => _RecordScreenState();
@@ -121,7 +118,7 @@ class _RecordScreenState extends State<RecordScreen> {
     List<PomoticaRecordModel> records =
         PomoticaRecordCrud().recordsOrderGetAll();
     Map<DateTime, double> spots = {};
-    records.forEach((record) {
+    for (var record in records) {
       if (spots.containsKey(record.date)) {
         spots[record.date] = spots[record.date]!.toDouble() +
             record.startTime.difference(record.endTime).inMinutes.toDouble();
@@ -129,7 +126,7 @@ class _RecordScreenState extends State<RecordScreen> {
         spots[record.date] =
             record.startTime.difference(record.endTime).inMinutes.toDouble();
       }
-    });
+    }
     List<FlSpot> flSpots = [];
     spots.forEach((key, value) {
       flSpots.add(FlSpot(key.weekday.toDouble(), value));
@@ -150,7 +147,7 @@ class _RecordScreenState extends State<RecordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: MyAppBar(action: [], text: "See your Records").paint(),
+        appBar: MyAppBar(action: const [], text: "See your Records").paint(),
         body: PomoticaRecordCrud().recordsOrderGetAll().isEmpty
             ? Center(
                 child: AutoSizeText("You have no record!",
@@ -162,7 +159,7 @@ class _RecordScreenState extends State<RecordScreen> {
                     MyText("Weekly Report").heading3(),
                     ViewButtons(),
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       // padding: EdgeInsets.all(10),
                       height: Get.height - 200,
                       child: LineChart(
@@ -185,7 +182,7 @@ class _RecordScreenState extends State<RecordScreen> {
   Widget ViewButtons() {
     return Row(
       mainAxisSize: MainAxisSize.min,
-      children: [],
+      children: const [],
     );
   }
 

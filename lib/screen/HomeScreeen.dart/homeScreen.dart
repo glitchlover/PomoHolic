@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   final bool? isNetConnected;
   final bool? isSomethingWentWrong;
 
-  HomeScreen({
+  const HomeScreen({
     Key? key,
     this.isNetConnected,
     this.isSomethingWentWrong,
