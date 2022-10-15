@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
     Get.put(PomoSpaceControllers(), permanent: true);
     Get.put(PomoRewardsController(Get.find<PomoSpaceControllers>()));
     Get.lazyPut(() => MyMusicPlayerController());
-    return Scaffold(appBar: null, body: PomoSpace());
+    return Scaffold(appBar: null, body: SafeArea(child: PomoSpace()));
   }
 
   // loggedOut() async {
