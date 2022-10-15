@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pomotica/Themes/myColors.dart';
-import 'package:pomotica/Themes/myText.dart';
+import 'package:pomotica/styles/colors.dart';
+import 'package:pomotica/styles/text_style.dart';
 
 class MyAlertDialog extends StatelessWidget {
   /// Creates an alert dialog.

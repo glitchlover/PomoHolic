@@ -2,9 +2,9 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pomotica/Themes/myText.dart';
 import 'package:pomotica/database/pomoticaRecordCrud.dart';
 import 'package:pomotica/model/pomoticaRecordModel.dart';
+import 'package:pomotica/styles/text_style.dart';
 import 'package:pomotica/widget/myAppBar.dart';
 
 class RecordScreen extends StatefulWidget {

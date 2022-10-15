@@ -1,9 +1,9 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:pomotica/Themes/myText.dart';
 import 'package:pomotica/model/authModel.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
+import 'package:pomotica/styles/text_style.dart';
 
 class LoadingScreen extends StatefulWidget {
   AuthModel? authModel;

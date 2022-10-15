@@ -1,6 +1,6 @@
 // import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
-// import 'package:pomotica/Themes/myText.dart';
+// import 'package:pomotica/styles/text_style.dart';
 // import 'package:pomotica/core/myGetStorageBox.dart';
 
 // import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';

@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:numberpicker/numberpicker.dart';
 import 'package:pixelarticons/pixelarticons.dart';
-import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/core/myGetStorageBox.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
-
-import '../Themes/myText.dart';
+import 'package:pomotica/styles/colors.dart';
+import 'package:pomotica/styles/text_style.dart';
 
 class MyTimePicker extends StatelessWidget {
   final PomoSpaceControllers pctrl;

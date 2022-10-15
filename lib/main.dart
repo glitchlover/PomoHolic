@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:pomotica/Themes/myThemeManager.dart';
 import 'package:pomotica/core/myIsar.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
+import 'package:pomotica/styles/theme_manager.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 

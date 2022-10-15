@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pomotica/Themes/myText.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
+import 'package:pomotica/styles/text_style.dart';
 
 class PomodoroSessionView extends StatelessWidget {
   final PomoSpaceControllers pctrl;

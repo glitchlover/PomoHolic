@@ -1,8 +1,8 @@
 // import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 // import 'package:iconsax/iconsax.dart';
-// import 'package:pomotica/Themes/myColors.dart';
-// import 'package:pomotica/Themes/myText.dart';
+// import 'package:pomotica/styles/colors.dart';
+// import 'package:pomotica/styles/text_style.dart';
 // import 'package:pomotica/database/musicCrud.dart';
 // import 'package:pomotica/model/musicModel.dart';
 // import 'package:pomotica/widget/myIconButton.dart';

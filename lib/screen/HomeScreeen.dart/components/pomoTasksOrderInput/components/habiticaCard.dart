@@ -6,10 +6,9 @@ import 'package:markdown/markdown.dart' as md;
 import 'package:pomotica/database/tasksOrderCrud.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
+import'package:pomotica/styles/colors.dart';
+import'package:pomotica/styles/text_style.dart';
 import 'package:pomotica/widget/myIconButton.dart';
-
-import '../../../../../Themes/myColors.dart';
-import '../../../../../Themes/myText.dart';
 
 class HabiticaCard extends StatelessWidget {
   final String title;

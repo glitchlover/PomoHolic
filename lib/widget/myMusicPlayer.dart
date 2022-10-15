@@ -8,13 +8,12 @@ import 'package:get/get.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/database/musicCrud.dart';
 import 'package:pomotica/model/musicModel.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
+import 'package:pomotica/styles/colors.dart';
+import 'package:pomotica/styles/text_style.dart';
 import 'package:pomotica/widget/myIconButton.dart';
-
-import '../Themes/myText.dart';
 
 class MyMusicPlayer extends StatelessWidget {
   final PomoSpaceControllers pctrl;

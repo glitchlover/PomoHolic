@@ -2,8 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pomotica/Themes/myColors.dart';
-import 'package:pomotica/Themes/myText.dart';
 import 'package:pomotica/core/myGetStorageBox.dart';
 import 'package:pomotica/database/pomoticaRecordCrud.dart';
 import 'package:pomotica/database/tasksOrderCrud.dart';
@@ -19,6 +17,8 @@ import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components
 import 'package:pomotica/screen/HomeScreeen.dart/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
 import 'package:pomotica/services/isolates/iso.dart';
+import 'package:pomotica/styles/colors.dart';
+import 'package:pomotica/styles/text_style.dart';
 import 'package:pomotica/widget/myIconButton.dart';
 import 'package:pomotica/widget/myLevelIndecator.dart';
 import 'package:pomotica/widget/myTimePicker.dart';

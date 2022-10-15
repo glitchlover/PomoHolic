@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:pomotica/Themes/myText.dart';
 import 'package:pomotica/screen/loadingScreen.dart';
 import 'package:pomotica/services/habiticaAuthServices.dart';
+import 'package:pomotica/styles/colors.dart';
+import 'package:pomotica/styles/text_style.dart';
 import 'package:pomotica/widget/myTextField.dart';
 
-import '../Themes/myColors.dart';
 import '../model/authModel.dart';
 
 class AuthScreen extends StatelessWidget {

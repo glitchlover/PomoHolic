@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pomotica/Themes/myText.dart';
+import 'package:pomotica/styles/text_style.dart';
 
 class SomethingWentWrongScreen extends StatelessWidget {
   const SomethingWentWrongScreen({ Key? key }) : super(key: key);

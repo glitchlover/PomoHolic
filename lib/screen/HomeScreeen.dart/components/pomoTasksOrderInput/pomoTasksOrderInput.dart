@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:isar/isar.dart';
-import 'package:pomotica/Themes/myColors.dart';
-import 'package:pomotica/Themes/myText.dart';
 import 'package:pomotica/core/myIsar.dart';
 import 'package:pomotica/database/tasksOrderCrud.dart';
 import 'package:pomotica/model/pomoticaTasksOrderModel.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/pomoTasksOrderInput/components/habiticaCard.dart';
+import 'package:pomotica/styles/colors.dart';
+import 'package:pomotica/styles/text_style.dart';
 import 'package:pomotica/widget/myAppBar.dart';
 import 'package:pomotica/widget/myTaskInput.dart';
 

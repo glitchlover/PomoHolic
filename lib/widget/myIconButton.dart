@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pomotica/styles/colors.dart';
 
-import '../Themes/myColors.dart';
 import 'myContainer.dart';
 
 class MyIconButton extends IconButton {

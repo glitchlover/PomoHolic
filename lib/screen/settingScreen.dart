@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pomotica/Themes/myColors.dart';
-import 'package:pomotica/Themes/myThemeManager.dart';
+import 'package:pomotica/styles/colors.dart';
+import 'package:pomotica/styles/text_style.dart';
+import 'package:pomotica/styles/theme_manager.dart';
 import 'package:pomotica/widget/myAppBar.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
-import '../Themes/myText.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({Key? key}) : super(key: key);

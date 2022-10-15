@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pomotica/Themes/myText.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
+import 'package:pomotica/styles/text_style.dart';
 import 'package:pomotica/widget/myIconButton.dart';
 
 class MyAppBar extends AppBar {

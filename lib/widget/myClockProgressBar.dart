@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/model/enums/pomodoroStatus.dart';
+import 'package:pomotica/styles/colors.dart';
 
 import '../screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../Themes/myColors.dart';
+import 'package:pomotica/styles/colors.dart';
 
 class MyToggleSwitch extends StatefulWidget {
   const MyToggleSwitch({Key? key, required this.value, required this.onTap})

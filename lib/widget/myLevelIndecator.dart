@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomoReward.dart';
+import 'package:pomotica/styles/colors.dart';
+import 'package:pomotica/styles/text_style.dart';
 
-import '../Themes/myColors.dart';
-import '../Themes/myText.dart';
 import '../screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
 
 

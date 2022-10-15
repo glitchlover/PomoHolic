@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pomotica/Themes/myColors.dart';
+import 'package:pomotica/styles/colors.dart';
 
 class MyStepProgressBar extends StatelessWidget {
   const MyStepProgressBar({

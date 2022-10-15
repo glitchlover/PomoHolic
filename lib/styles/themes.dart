@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'myColors.dart';
+import 'colors.dart';
 
 class MyThemes{
   ThemeData baseTheme(){
