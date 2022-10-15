@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
-import "dart:math" as math;
 import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/model/enums/pomodoroStatus.dart';
 

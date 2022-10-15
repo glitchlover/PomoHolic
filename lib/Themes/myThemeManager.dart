@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/Themes/myThemes.dart';
-import 'package:pomotica/Themes/purpleTheme.dart';
 
 class MyThemeManager {
   List<ThemeData> getThemes() {

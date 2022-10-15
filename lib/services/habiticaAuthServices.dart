@@ -1,16 +1,9 @@
-import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:iconsax/iconsax.dart';
 import 'package:pomotica/model/authModel.dart';
 import 'package:pomotica/services/myHabiticaAuth.dart';
-import 'package:pomotica/services/userDataService.dart';
 
-import '../Themes/myColors.dart';
 import '../model/habiticaUserModel.dart';
 import 'documentServices.dart';
 

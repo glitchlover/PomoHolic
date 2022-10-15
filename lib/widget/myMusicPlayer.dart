@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:audioplayers/audioplayers.dart';
@@ -9,17 +7,12 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:getwidget/components/checkbox/gf_checkbox.dart';
 import 'package:getwidget/getwidget.dart';
-import 'package:getwidget/size/gf_size.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/database/musicCrud.dart';
-import 'package:pomotica/model/enums/pomodoroStatus.dart';
 import 'package:pomotica/model/musicModel.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/setMarket.dart';
-import 'package:pomotica/services/documentServices.dart';
-import 'package:pomotica/services/myHabiticaAuth.dart';
 import 'package:pomotica/widget/myIconButton.dart';
 
 import '../Themes/myText.dart';

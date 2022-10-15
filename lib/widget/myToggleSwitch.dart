@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:getwidget/components/progress_bar/gf_progress_bar.dart';
-import 'package:pomotica/Themes/myThemeManager.dart';
-import 'package:stacked_themes/stacked_themes.dart';
 
 import '../Themes/myColors.dart';
 

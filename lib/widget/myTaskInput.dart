@@ -1,9 +1,7 @@
-import 'package:auto_size_text_field/auto_size_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/Themes/myText.dart';
-import 'package:intl/intl.dart';
 
 class MyTaskInput extends StatelessWidget {
   MyTaskInput({

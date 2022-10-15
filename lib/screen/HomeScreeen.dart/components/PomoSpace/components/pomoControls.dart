@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/screen/GiveUpScreen.dart';
-import 'package:pomotica/widget/myConfetti.dart';
 import 'package:pomotica/widget/myMusicPlayer.dart';
 
 import '../../../../../Themes/myText.dart';
-import '../../../../../services/isolates/iso.dart';
 import '../pomoSpace.dart';
 
 class PomoControls extends StatelessWidget {

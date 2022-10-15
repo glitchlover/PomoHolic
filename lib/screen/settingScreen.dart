@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/Themes/myThemeManager.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
 import 'package:pomotica/widget/myAppBar.dart';
-import 'package:pomotica/widget/myToggleSwitch.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 

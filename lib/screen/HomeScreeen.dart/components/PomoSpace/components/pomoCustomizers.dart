@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/comingSoonScreen.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
@@ -9,10 +8,7 @@ import 'package:pomotica/screen/recordScreen.dart';
 import 'package:pomotica/screen/settingScreen.dart';
 import 'package:pomotica/widget/myIconButton.dart';
 import 'package:pomotica/widget/myMusicPlayer.dart';
-import 'package:pomotica/widget/myTagList.dart';
 import 'package:pomotica/widget/myTimePicker.dart';
-
-import '../../../../../widget/myContainer.dart';
 
 class PomoCustomizers extends StatelessWidget {
   final PomoSpaceControllers ctrl;

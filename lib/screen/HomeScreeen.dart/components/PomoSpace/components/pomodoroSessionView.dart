@@ -1,11 +1,7 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pomotica/Themes/myText.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
-
-import '../../../../../widget/myStepperProgressBar.dart';
 
 class PomodoroSessionView extends StatelessWidget {
   final PomoSpaceControllers pctrl;

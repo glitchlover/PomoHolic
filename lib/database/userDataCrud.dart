@@ -1,10 +1,7 @@
 import 'package:isar/isar.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:pomotica/core/myIsar.dart';
 import 'package:pomotica/model/enums/pomodoroStatus.dart';
 import 'package:pomotica/model/pomoticaUserModel.dart';
-
-import '../model/pomoticaTasksOrderModel.dart';
 
 class UserDataCrud {
   

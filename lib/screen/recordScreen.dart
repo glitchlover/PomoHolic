@@ -1,15 +1,10 @@
-import 'dart:math';
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_heatmap_calendar/flutter_heatmap_calendar.dart';
 import 'package:get/get.dart';
-import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/Themes/myText.dart';
 import 'package:pomotica/database/pomoticaRecordCrud.dart';
 import 'package:pomotica/model/pomoticaRecordModel.dart';

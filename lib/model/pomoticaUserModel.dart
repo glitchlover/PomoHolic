@@ -1,11 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:isar/isar.dart';
-
-import 'package:pomotica/Themes/myColors.dart';
-import 'package:pomotica/model/habiticaUserModel.dart';
 
 import 'enums/pomodoroStatus.dart';
 

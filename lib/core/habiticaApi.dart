@@ -1,8 +1,6 @@
 import 'dart:async';
 
 import 'package:http/http.dart';
-import 'package:pomotica/model/pomoticaTasksOrderModel.dart';
-import 'package:pomotica/model/pomoticaUserModel.dart';
 import 'package:pomotica/services/habiticaAuthServices.dart';
 import 'package:pomotica/services/myHabiticaAuth.dart';
 

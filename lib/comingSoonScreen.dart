@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pomotica/Themes/myText.dart';
-import 'package:pomotica/main.dart';
 import 'package:pomotica/widget/myAppBar.dart';
 
 class ComingSoonScreen extends StatelessWidget {

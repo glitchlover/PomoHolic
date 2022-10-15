@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pomotica/Themes/myText.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:pomotica/main.dart';
-import 'package:pomotica/screen/authScreen.dart';
+import 'package:pomotica/Themes/myText.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
+import 'package:pomotica/screen/authScreen.dart';
 import 'package:pomotica/screen/somethingWentWrongScreen.dart';
 import 'package:pomotica/services/habiticaAuthServices.dart';
 

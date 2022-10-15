@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:isar/isar.dart';
+
 import 'package:pomotica/core/habiticaApi.dart';
-import 'package:pomotica/core/myIsar.dart';
 import 'package:pomotica/database/tasksOrderCrud.dart';
 import 'package:pomotica/database/userDataCrud.dart';
 import 'package:pomotica/model/HabiticaTaskModel.dart';
-import 'package:pomotica/model/habiticaUserModel.dart';
 import 'package:pomotica/model/pomoticaUserModel.dart';
 import 'package:pomotica/services/documentServices.dart';
 

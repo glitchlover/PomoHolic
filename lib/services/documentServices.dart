@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
-import 'package:pomotica/model/authModel.dart';
 import 'package:pomotica/model/HabiticaTaskModel.dart';
+import 'package:pomotica/model/authModel.dart';
 import 'package:pomotica/services/habiticaAuthServices.dart';
 
 import '../model/habiticaUserModel.dart';

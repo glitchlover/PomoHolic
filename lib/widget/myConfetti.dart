@@ -1,9 +1,7 @@
 import 'dart:math';
-import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'package:pomotica/widget/myParticles.dart';
 
 class MyConfetti extends StatefulWidget {

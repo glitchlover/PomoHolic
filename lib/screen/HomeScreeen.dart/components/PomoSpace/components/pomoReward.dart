@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pomotica/Themes/myColors.dart';
-import 'package:pomotica/database/userDataCrud.dart';
 
 import '../../../../../Themes/myText.dart';
 import '../pomoSpace.dart';

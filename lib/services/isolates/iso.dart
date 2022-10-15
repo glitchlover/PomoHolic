@@ -1,10 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:developer';
 import 'dart:isolate';
-
-import 'package:flutter/foundation.dart';
-import 'package:get/get.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
 
 class Iso {
   Iso({

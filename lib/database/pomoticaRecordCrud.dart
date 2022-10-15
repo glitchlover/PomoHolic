@@ -1,5 +1,4 @@
 import 'package:isar/isar.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:pomotica/core/myIsar.dart';
 
 import '../model/pomoticaRecordModel.dart';

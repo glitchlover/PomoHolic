@@ -1,43 +1,32 @@
 import 'dart:async';
-import 'dart:developer';
-import 'dart:isolate';
-import 'dart:math' as math;
-import 'package:getwidget/getwidget.dart';
-import 'package:pomotica/core/myGetStorageBox.dart';
-import 'package:pomotica/database/pomoticaRecordCrud.dart';
-import 'package:pomotica/model/pomoticaRecordModel.dart';
-import 'package:pomotica/screen/ExitScreen.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
-import 'package:pomotica/services/isolates/iso.dart';
-import 'package:pomotica/widget/myIconButton.dart';
-import 'package:pomotica/widget/myLevelIndecator.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pixelarticons/pixel.dart';
 import 'package:pomotica/Themes/myColors.dart';
 import 'package:pomotica/Themes/myText.dart';
+import 'package:pomotica/core/myGetStorageBox.dart';
+import 'package:pomotica/database/pomoticaRecordCrud.dart';
 import 'package:pomotica/database/tasksOrderCrud.dart';
 import 'package:pomotica/database/userDataCrud.dart';
 import 'package:pomotica/model/enums/pomodoroStatus.dart';
-import 'package:pomotica/model/musicModel.dart';
+import 'package:pomotica/model/pomoticaRecordModel.dart';
 import 'package:pomotica/model/pomoticaUserModel.dart';
-import 'package:pomotica/widget/myClockProgressBar.dart';
 // import 'package:pomotica/widget/myConfetti.dart';
 
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomoClock.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomoControls.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomodoroSessionView.dart';
-import 'package:pomotica/widget/myMusicPlayer.dart';
+import 'package:pomotica/screen/HomeScreeen.dart/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
+import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
+import 'package:pomotica/services/isolates/iso.dart';
+import 'package:pomotica/widget/myIconButton.dart';
+import 'package:pomotica/widget/myLevelIndecator.dart';
 import 'package:pomotica/widget/myTimePicker.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:wakelock/wakelock.dart';
 
 import '../../../../widget/myAlerDialog.dart';
-import 'components/downwordScroller.dart';
 import 'components/pomoCustomizers.dart';
-import 'components/pomoReward.dart';
-import 'components/pomoStart.dart';
 import 'components/pomoTaskName.dart';
 
 class PomoSpace extends StatelessWidget {

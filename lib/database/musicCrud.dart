@@ -1,10 +1,3 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:isar/isar.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:pomotica/core/myIsar.dart';
-
 import '../model/musicModel.dart';
 
 class MusicCrud {

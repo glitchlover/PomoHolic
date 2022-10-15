@@ -1,21 +1,13 @@
-import 'dart:math';
-import 'dart:ui';
-
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:pomotica/Themes/myThemeManager.dart';
 import 'package:pomotica/core/myIsar.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomoReward.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
 import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
-import 'package:flutter/material.dart';
-import 'package:pomotica/widget/myMusicPlayer.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
-import 'Themes/myText.dart';
 import 'core/myGetStorageBox.dart';
 
 
