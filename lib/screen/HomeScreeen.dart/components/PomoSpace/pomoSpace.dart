@@ -12,7 +12,6 @@ import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
 import 'package:pomotica/services/isolates/iso.dart';
 import 'package:pomotica/widget/myIconButton.dart';
 import 'package:pomotica/widget/myLevelIndecator.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pixelarticons/pixel.dart';
@@ -398,7 +397,7 @@ class PomoSpaceControllers extends GetxController {
     } else {
       setStatus(PomodoroStatus.runningPomodoro);
     }
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) async {
+    _timer = Timer.periodic(Duration(milliseconds: 1), (timer) async {
       currentTimeCount.value++;
       update();
 
@@ -418,23 +417,22 @@ class PomoSpaceControllers extends GetxController {
   }
 
 //////////////////////// Running Break //////////////////////////
-  static void breakTimeStart() {
-    PomoSpaceControllers ctrl = Get.find<PomoSpaceControllers>();
-    ctrl._timer?.cancel();
-    ctrl.currentTimeCount.value = 0;
-    ctrl.update();
-    if (ctrl.currentSessions.value >= ctrl.currentSettedSessions.value) {
-      ctrl.setStatus(PomodoroStatus.setFinished);
-      ctrl.currentSessions.value = 0;
-      ctrl.giveRewards();
-      ctrl.update();
+  void breakTimeStart() {
+    _timer?.cancel();
+    currentTimeCount.value = 0;
+    update();
+    if (currentSessions.value >= currentSettedSessions.value) {
+      setStatus(PomodoroStatus.setFinished);
+      currentSessions.value = 0;
+      giveRewards();
+      update();
     } else {
-      ctrl.setStatus(PomodoroStatus.runningShortBreak);
-      ctrl._timer = Timer.periodic(Duration(seconds: 1), (timer) async {
-        ctrl.currentTimeCount.value++;
-        ctrl.update();
-        if (ctrl.currentTimeCount.value == ctrl.currentSettedBreakTime.value) {
-          ctrl.setStatus(PomodoroStatus.extraBreak);
+      setStatus(PomodoroStatus.runningShortBreak);
+      _timer = Timer.periodic(Duration(milliseconds: 1), (timer) async {
+        currentTimeCount.value++;
+        update();
+        if (currentTimeCount.value == currentSettedBreakTime.value) {
+          setStatus(PomodoroStatus.extraBreak);
           Get.snackbar(
             "Break time is over.",
             "Go and work harder",
@@ -459,7 +457,7 @@ class PomoSpaceControllers extends GetxController {
       currentSessions.value == currentSettedSessions.value
           ? setStatus(PomodoroStatus.runningLongBreak)
           : setStatus(PomodoroStatus.runningShortBreak);
-      Iso(debugName: "break-time").startEngine(breakTimeStart);
+      breakTimeStart();
     } else if (currentStatus.value == PomodoroStatus.runningLongBreak ||
         currentStatus.value == PomodoroStatus.runningShortBreak ||
         currentStatus.value == PomodoroStatus.extraBreak) {
@@ -551,7 +549,7 @@ class PomoSpaceControllers extends GetxController {
               ],
             ),
             SizedBox(
-              height: 5.h,
+              height: 5,
             ),
             Container(
                 margin: EdgeInsets.all(2),
