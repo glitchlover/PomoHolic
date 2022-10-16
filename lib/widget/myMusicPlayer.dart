@@ -12,11 +12,10 @@ import 'package:pomotica/database/musicCrud.dart';
 import 'package:pomotica/model/musicModel.dart';
 import 'package:pomotica/screen/home/components/PomoSpace/pomoSpace.dart';
 import 'package:pomotica/styles/colors.dart';
-import 'package:pomotica/styles/text_style.dart';
-import 'package:pomotica/widget/myIconButton.dart';
 
 class MyMusicPlayer extends StatelessWidget {
   final PomoSpaceControllers pctrl;
+
   const MyMusicPlayer({Key? key, required this.pctrl}) : super(key: key);
 
   @override
@@ -24,49 +23,57 @@ class MyMusicPlayer extends StatelessWidget {
     MyMusicPlayerController ctrl = Get.find<MyMusicPlayerController>();
     return AlertDialog(
       content: SingleChildScrollView(
-        child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
+        child: Column(
+          children: [
+            const SizedBox(height: 12),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    MyIconButton(
-                        onPressed: () {
-                          ctrl.onClick();
-                        },
-                        icon: Obx(() => Icon(ctrl.isPlaying.value
-                            ? Iconsax.volume_cross
-                            : Iconsax.volume_mute))),
-                    const Spacer(),
-                    MyIconButton(
-                        onPressed: () async {
-                          !pctrl.canPlay.value
-                              ? ctrl.players.forEach((el) => el.pause())
-                              : null;
-                          Get.back();
-                        },
-                        icon: const Icon(Icons.close))
-                  ],
+                GestureDetector(
+                  onTap: () {
+                    ctrl.onClick();
+                  },
+                  child: Obx(
+                    () => Icon(
+                      ctrl.isPlaying.value
+                          ? Iconsax.volume_cross
+                          : Iconsax.volume_mute,
+                    ),
+                  ),
                 ),
-                const SizedBox(height: 20),
-                SizedBox(
-                    width: Get.width - 50,
-                    height: Get.height - 200,
-                    child: ListView.separated(
-                        shrinkWrap: true,
-                        itemCount: ctrl.musics.length,
-                        separatorBuilder: (BuildContext context, int index) {
-                          // print(ctrl.musics.length);
-                          return const SizedBox(height: 20);
-                        },
-                        itemBuilder: (BuildContext context, int index) {
-                          return MusicTile(
-                            pctrl: pctrl,
-                            index: index,
-                          ); //data:snapshot.data);
-                        }))
+                GestureDetector(
+                  onTap: () async {
+                    !pctrl.canPlay.value
+                        ? ctrl.players.forEach((el) => el.pause())
+                        : null;
+                    Get.back();
+                  },
+                  child: const Icon(Icons.close),
+                )
               ],
-            )),
+            ),
+            const SizedBox(height: 30),
+            SizedBox(
+              width: Get.width,
+              height: Get.height * .48,
+              child: Center(
+                child: ListView.separated(
+                    shrinkWrap: true,
+                    itemCount: ctrl.musics.length,
+                    padding: EdgeInsets.zero,
+                    separatorBuilder: (BuildContext context, int index) {
+                      return const SizedBox(height: 48);
+                    },
+                    itemBuilder: (BuildContext context, int index) {
+                      return MusicTile(
+                        pctrl: pctrl,
+                        index: index,
+                      ); //data:snapshot.data);
+                    }),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -74,6 +81,7 @@ class MyMusicPlayer extends StatelessWidget {
 
 class MusicTile extends StatelessWidget {
   final PomoSpaceControllers pctrl;
+
   const MusicTile({
     Key? key,
     required this.pctrl,
@@ -86,55 +94,63 @@ class MusicTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     MyMusicPlayerController ctrl = Get.find<MyMusicPlayerController>();
-    return Container(
-        // padding: const EdgeInsets.all(10.0),
-        child: SizedBox(
-            height: 100,
-            child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Obx(() => GFCheckbox(
-                            activeIcon: const Icon(Icons.circle, size: 10),
-                            type: GFCheckboxType.circle,
-                            activeBgColor: MyColors.blue,
-                            activeBorderColor: MyColors.blue,
-                            onChanged: (p0) {
-                              ctrl.actives[index] = p0;
-                              ctrl.actives.refresh();
-                              ctrl.update();
-                            },
-                            value: ctrl.actives[index],
-                            size: 15,
-                          )),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      SizedBox(
-                        width: Get.width / 8,
-                        child: MyText(ctrl.musics[index].title,
-                                color: MyColors.primaryWhite)
-                            .text(14),
-                      ),
-                      Obx(() => Slider(
-                            min: 0.0,
-                            max: 1.0,
-                            value: ctrl.musics[index].volume,
-                            activeColor: MyColors.lighten(MyColors.pink),
-                            inactiveColor: Colors.grey.withOpacity(0.5),
-                            onChanged: (val) {
-                              ctrl.onVolumeChange(val, index);
-                              ctrl.update();
-                            },
-                          )),
-                    ],
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Expanded(
+          flex: 3,
+          child: Row(
+            children: [
+              Obx(() {
+                return GFCheckbox(
+                  activeIcon: const Icon(Icons.circle, size: 10),
+                  type: GFCheckboxType.circle,
+                  activeBgColor: MyColors.blue,
+                  activeBorderColor: MyColors.blue,
+                  onChanged: (p0) {
+                    ctrl.actives[index] = p0;
+                    ctrl.actives.refresh();
+                    ctrl.update();
+                  },
+                  value: ctrl.actives[index],
+                  size: 15,
+                );
+              }),
+              const SizedBox(width: 10),
+              Flexible(
+                child: Text(
+                  ctrl.musics[index].title,
+                  style: const TextStyle(
+                    color: MyColors.primaryWhite,
+                    fontSize: 14,
                   ),
-                  // SizedBox(width: 20),
-                ])));
+                ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          flex: 5,
+          child: Obx(() {
+            return SliderTheme(
+              data:
+                  SliderThemeData(overlayShape: SliderComponentShape.noOverlay),
+              child: Slider(
+                min: 0.0,
+                max: 1.0,
+                value: ctrl.musics[index].volume,
+                activeColor: MyColors.lighten(MyColors.pink),
+                inactiveColor: Colors.grey.withOpacity(0.5),
+                onChanged: (val) {
+                  ctrl.onVolumeChange(val, index);
+                  ctrl.update();
+                },
+              ),
+            );
+          }),
+        ),
+      ],
+    );
   }
 }
 
