@@ -4,7 +4,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:pomotica/coming_soon_screen.dart';
 import 'package:pomotica/screen/home/components/PomoSpace/pomoSpace.dart';
 import 'package:pomotica/screen/home/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
-import 'package:pomotica/screen/recordScreen.dart';
+import 'package:pomotica/screen/record_screen.dart';
 import 'package:pomotica/screen/settingScreen.dart';
 import 'package:pomotica/widget/myIconButton.dart';
 import 'package:pomotica/widget/myMusicPlayer.dart';
