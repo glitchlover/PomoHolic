@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:pomotica/screen/loadingScreen.dart';
+import 'package:pomotica/screen/loading_screen.dart';
 import 'package:pomotica/services/habiticaAuthServices.dart';
 import 'package:pomotica/styles/colors.dart';
 import 'package:pomotica/styles/text_style.dart';

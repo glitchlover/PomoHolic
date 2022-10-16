@@ -8,7 +8,7 @@ import 'package:pomotica/services/habiticaAuthServices.dart';
 import 'package:pomotica/styles/text_style.dart';
 
 import '../services/userDataService.dart';
-import 'loadingScreen.dart';
+import 'loading_screen.dart';
 
 class InternetNotFoundScreen extends StatelessWidget {
   const InternetNotFoundScreen({Key? key}) : super(key: key);
