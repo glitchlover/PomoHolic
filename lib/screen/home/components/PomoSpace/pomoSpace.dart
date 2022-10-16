@@ -11,11 +11,11 @@ import 'package:pomotica/model/pomoticaRecordModel.dart';
 import 'package:pomotica/model/pomoticaUserModel.dart';
 // import 'package:pomotica/widget/myConfetti.dart';
 
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomoClock.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomoControls.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomodoroSessionView.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
+import 'package:pomotica/screen/home/components/PomoSpace/components/pomoClock.dart';
+import 'package:pomotica/screen/home/components/PomoSpace/components/pomoControls.dart';
+import 'package:pomotica/screen/home/components/PomoSpace/components/pomodoroSessionView.dart';
+import 'package:pomotica/screen/home/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
+import 'package:pomotica/screen/home/homeScreen.dart';
 import 'package:pomotica/services/isolates/iso.dart';
 import 'package:pomotica/styles/colors.dart';
 import 'package:pomotica/styles/text_style.dart';

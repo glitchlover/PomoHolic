@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getwidget/getwidget.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomoReward.dart';
+import 'package:pomotica/screen/home/components/PomoSpace/components/pomoReward.dart';
+import 'package:pomotica/screen/home/components/PomoSpace/pomoSpace.dart';
 import 'package:pomotica/styles/colors.dart';
 import 'package:pomotica/styles/text_style.dart';
 
-import '../screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
 
 
 class LevelIndecator extends StatelessWidget {

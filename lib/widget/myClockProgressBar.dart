@@ -3,7 +3,8 @@ import 'package:get/get.dart';
 import 'package:pomotica/model/enums/pomodoroStatus.dart';
 import 'package:pomotica/styles/colors.dart';
 
-import '../screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
+import 'package:pomotica/screen/home/components/PomoSpace/pomoSpace.dart';
+
 
 class MyClockProgressBar extends StatelessWidget {
   const MyClockProgressBar({Key? key, required this.ctrl}) : super(key: key);

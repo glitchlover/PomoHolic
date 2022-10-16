@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:pomotica/model/authModel.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
+import 'package:pomotica/screen/home/homeScreen.dart';
 import 'package:pomotica/styles/text_style.dart';
 
 class LoadingScreen extends StatefulWidget {

@@ -4,7 +4,7 @@ import 'package:isar/isar.dart';
 import 'package:pomotica/core/myIsar.dart';
 import 'package:pomotica/database/tasksOrderCrud.dart';
 import 'package:pomotica/model/pomoticaTasksOrderModel.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/pomoTasksOrderInput/components/habiticaCard.dart';
+import 'package:pomotica/screen/home/components/pomoTasksOrderInput/components/habiticaCard.dart';
 import 'package:pomotica/styles/colors.dart';
 import 'package:pomotica/styles/text_style.dart';
 import 'package:pomotica/widget/myAppBar.dart';

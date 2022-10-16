@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomoClock.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomoControls.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/components/pomodoroSessionView.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
+import 'package:pomotica/screen/home/components/PomoSpace/components/pomoClock.dart';
+import 'package:pomotica/screen/home/components/PomoSpace/components/pomoControls.dart';
+import 'package:pomotica/screen/home/components/PomoSpace/components/pomodoroSessionView.dart';
+import 'package:pomotica/screen/home/components/PomoSpace/pomoSpace.dart';
 import 'package:pomotica/widget/myIconButton.dart';
 
 class TimerScreen extends StatelessWidget {

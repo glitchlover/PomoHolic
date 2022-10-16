@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
+import 'package:pomotica/screen/home/components/PomoSpace/pomoSpace.dart';
 import 'package:pomotica/styles/colors.dart';
 import 'package:pomotica/styles/text_style.dart';
 

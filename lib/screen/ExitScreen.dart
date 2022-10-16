@@ -3,8 +3,8 @@
 // import 'package:pomotica/styles/text_style.dart';
 // import 'package:pomotica/core/myGetStorageBox.dart';
 
-// import 'package:pomotica/screen/HomeScreeen.dart/components/PomoSpace/pomoSpace.dart';
-// import 'package:pomotica/screen/HomeScreeen.dart/homeScreen.dart';
+// import 'package:pomotica/screen/home/components/PomoSpace/pomoSpace.dart';
+// import 'package:pomotica/screen/home/homeScreen.dart';
 // import 'package:pomotica/screen/TimerScreen.dart';
 
 // class ExitScreen extends StatelessWidget {
