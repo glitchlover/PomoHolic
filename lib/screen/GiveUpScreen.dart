@@ -56,7 +56,7 @@ class GiveUpScreen extends StatelessWidget {
                         ctrl.pomoExp.value = exp;
                         ctrl.userDataInstance.updateUserData(exp: exp);
                         ctrl.setStatus(PomodoroStatus.normal);
-                        Get.off(() => const HomeScreen());
+                        Get.off(() => HomeScreen());
                       },
                       child: MyText("Yes").text(30)),
                   TextButton(

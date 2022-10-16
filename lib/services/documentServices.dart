@@ -7,7 +7,7 @@ import 'package:pomotica/model/HabiticaTaskModel.dart';
 import 'package:pomotica/model/authModel.dart';
 import 'package:pomotica/services/habiticaAuthServices.dart';
 
-import '../model/habiticaUserModel.dart';
+import 'package:pomotica/model/habiticaUserModel.dart';
 
 class DocumentServices {
   final String masterDb = "pomoticaDb";

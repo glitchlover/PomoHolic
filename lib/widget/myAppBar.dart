@@ -23,7 +23,7 @@ class MyAppBar extends AppBar {
       leading: !isHomeScreen
           ? MyIconButton(
               onPressed: () {
-                Get.off(() => const HomeScreen());
+                Get.off(() => HomeScreen());
               },
               icon: const Icon(Icons.arrow_back))
           : null,

@@ -40,7 +40,7 @@ class InternetNotFoundScreen extends StatelessWidget {
                   var data = UserDataService()
                       .habiticaToPomoticaTaskModel()
                       .asStream();
-                  Get.off(() => const HomeScreen());
+                  Get.off(() => HomeScreen());
                 }
               },
               icon: const Icon(Iconsax.repeat)),

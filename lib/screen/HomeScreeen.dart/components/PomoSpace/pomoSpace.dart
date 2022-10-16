@@ -556,7 +556,7 @@ class PomoSpaceControllers extends GetxController {
           child: MyIconButton(
                   onPressed: () {
                     update();
-                    Get.to(() => const HomeScreen());
+                    Get.to(() => HomeScreen());
                   },
                   icon: const Icon(Icons.check, color: MyColors.yellow))
               .cicle(25, MyColors.yellow.withOpacity(.2)),
