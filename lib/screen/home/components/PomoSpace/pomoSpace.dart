@@ -15,7 +15,7 @@ import 'package:pomotica/screen/home/components/PomoSpace/components/pomoClock.d
 import 'package:pomotica/screen/home/components/PomoSpace/components/pomoControls.dart';
 import 'package:pomotica/screen/home/components/PomoSpace/components/pomodoroSessionView.dart';
 import 'package:pomotica/screen/home/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
-import 'package:pomotica/screen/home/homeScreen.dart';
+import 'package:pomotica/screen/home/home_screen.dart';
 import 'package:pomotica/services/isolates/iso.dart';
 import 'package:pomotica/styles/colors.dart';
 import 'package:pomotica/styles/text_style.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pomotica/model/enums/pomodoroStatus.dart';
 import 'package:pomotica/screen/home/components/PomoSpace/pomoSpace.dart';
-import 'package:pomotica/screen/home/homeScreen.dart';
+import 'package:pomotica/screen/home/home_screen.dart';
 import 'package:pomotica/styles/text_style.dart';
 
 class GiveUpScreen extends StatelessWidget {
