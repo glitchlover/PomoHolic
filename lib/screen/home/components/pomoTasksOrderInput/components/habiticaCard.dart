@@ -28,7 +28,7 @@ class HabiticaCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    PomoSpaceControllers ctrl = Get.put(PomoSpaceControllers());
+    PomoSpaceControllers ctrl = Get.find<PomoSpaceControllers>();
     PomoTasksOrderInputController pctrl =
         Get.put(PomoTasksOrderInputController());
     return Padding(

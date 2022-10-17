@@ -182,7 +182,7 @@ class MyNumberPicker extends StatelessWidget {
 }
 
 class MyTimePickerController extends GetxController {
-  PomoSpaceControllers ctrl = Get.put(PomoSpaceControllers());
+  PomoSpaceControllers ctrl = Get.find<PomoSpaceControllers>();
   Rx<int> focusTime = 25.obs;
   Rx<int> breakTime = 5.obs;
   Rx<int> sessionNumber = 4.obs;

@@ -234,7 +234,7 @@ class PomoSpaceControllers extends GetxController {
   }
 
   void updateActiveTasks({required int pomoActiveTaskId}) async {
-    Get.off(() => MyTimePicker(pctrl: Get.put(this)));
+    Get.off(() => MyTimePicker(pctrl: Get.find<PomoSpaceControllers>()));
     this.pomoActiveTaskId.value = pomoActiveTaskId;
     pomoActiveTask.value =
         await taskDataInstance.tasksOrderGet(pomoActiveTaskId);
