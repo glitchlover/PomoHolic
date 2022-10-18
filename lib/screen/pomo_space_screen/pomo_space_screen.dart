@@ -33,7 +33,7 @@ import 'components/pomoTaskName.dart';
 class PomoSpace extends StatelessWidget {
   PomoSpace({Key? key}) : super(key: key);
 
-  PomoSpaceControllers ctrl = Get.put(PomoSpaceControllers());
+  PomoSpaceControllers ctrl = Get.find<PomoSpaceControllers>();
 
   @override
   Widget build(BuildContext context) {
