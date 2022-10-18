@@ -4,10 +4,11 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:pomotica/database/tasksOrderCrud.dart';
-import 'package:pomotica/screen/home/components/PomoSpace/pomoSpace.dart';
-import 'package:pomotica/screen/home/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
-import'package:pomotica/styles/colors.dart';
-import'package:pomotica/styles/text_style.dart';
+import 'package:pomotica/screen/pomo_space_screen/pomo_space_screen.dart';
+import 'package:pomotica/screen/pomo_space_screen/pomo_space_screen.dart';
+import 'package:pomotica/screen/pomo_task_screen/pomo_task_screen.dart';
+import 'package:pomotica/styles/colors.dart';
+import 'package:pomotica/styles/text_style.dart';
 import 'package:pomotica/widget/myIconButton.dart';
 
 class HabiticaCard extends StatelessWidget {
@@ -67,10 +68,12 @@ class HabiticaCard extends StatelessWidget {
                         icon: const Icon(Iconsax.clock))
                     .paint(size: 20),
                 MyIconButton(
-                    onPressed: () {
-                      const PomoTasksOrderInput().addTaskDialog(edit: true, id:id);
-                    },
-                    icon: const Icon(Iconsax.edit_2)).paint(size: 20),
+                        onPressed: () {
+                          const PomoTasksOrderInput()
+                              .addTaskDialog(edit: true, id: id);
+                        },
+                        icon: const Icon(Iconsax.edit_2))
+                    .paint(size: 20),
               ],
             ),
             title: Padding(
@@ -84,7 +87,8 @@ class HabiticaCard extends StatelessWidget {
             children: [MarkdownTile(data: notes != null ? notes! : "")],
             // childrenPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
             expandedAlignment: Alignment.centerLeft,
-            childrenPadding: const EdgeInsets.only(left: 20, right: 10, bottom: 10),
+            childrenPadding:
+                const EdgeInsets.only(left: 20, right: 10, bottom: 10),
           ),
         ),
       ),
@@ -104,7 +108,8 @@ class HabiticaCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(5),
                       color: const Color.fromARGB(255, 65, 71, 74),
                     ),
-                    padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 3),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 2, horizontal: 3),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [

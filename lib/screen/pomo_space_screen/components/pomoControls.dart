@@ -5,7 +5,7 @@ import 'package:pomotica/styles/colors.dart';
 import 'package:pomotica/styles/text_style.dart';
 import 'package:pomotica/widget/myMusicPlayer.dart';
 
-import '../pomoSpace.dart';
+import '../pomo_space_screen.dart';
 
 class PomoControls extends StatelessWidget {
   PomoControls({

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pomotica/widget/myMusicPlayer.dart';
 
-import 'components/PomoSpace/components/pomoReward.dart';
-import 'components/PomoSpace/pomoSpace.dart';
+import '../pomo_space_screen/components/pomoReward.dart';
+import '../pomo_space_screen/pomo_space_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({

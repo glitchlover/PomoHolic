@@ -10,7 +10,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pomotica/database/musicCrud.dart';
 import 'package:pomotica/model/musicModel.dart';
-import 'package:pomotica/screen/home/components/PomoSpace/pomoSpace.dart';
+import 'package:pomotica/screen/pomo_space_screen/pomo_space_screen.dart';
 import 'package:pomotica/styles/colors.dart';
 
 class MyMusicPlayer extends StatelessWidget {

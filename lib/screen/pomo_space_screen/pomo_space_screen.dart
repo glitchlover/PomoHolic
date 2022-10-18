@@ -11,11 +11,12 @@ import 'package:pomotica/model/pomoticaRecordModel.dart';
 import 'package:pomotica/model/pomoticaUserModel.dart';
 // import 'package:pomotica/widget/myConfetti.dart';
 
-import 'package:pomotica/screen/home/components/PomoSpace/components/pomoClock.dart';
-import 'package:pomotica/screen/home/components/PomoSpace/components/pomoControls.dart';
-import 'package:pomotica/screen/home/components/PomoSpace/components/pomodoroSessionView.dart';
-import 'package:pomotica/screen/home/components/pomoTasksOrderInput/pomoTasksOrderInput.dart';
+import 'package:pomotica/screen/pomo_space_screen/components/pomoClock.dart';
+import 'package:pomotica/screen/pomo_space_screen/components/pomoControls.dart';
+import 'package:pomotica/screen/pomo_space_screen/components/pomodoroSessionView.dart';
+import 'package:pomotica/screen/pomo_space_screen/pomo_space_screen.dart';
 import 'package:pomotica/screen/home/home_screen.dart';
+import 'package:pomotica/screen/pomo_task_screen/pomo_task_screen.dart';
 import 'package:pomotica/services/isolates/iso.dart';
 import 'package:pomotica/styles/colors.dart';
 import 'package:pomotica/styles/text_style.dart';
@@ -25,7 +26,7 @@ import 'package:pomotica/widget/myTimePicker.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:wakelock/wakelock.dart';
 
-import '../../../../widget/myAlerDialog.dart';
+import '../../widget/myAlerDialog.dart';
 import 'components/pomoCustomizers.dart';
 import 'components/pomoTaskName.dart';
 

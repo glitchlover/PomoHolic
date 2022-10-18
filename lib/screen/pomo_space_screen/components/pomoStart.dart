@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pomotica/widget/myIconButton.dart';
 
-import '../pomoSpace.dart';
+import '../pomo_space_screen.dart';
 
 class PomoStart extends StatelessWidget {
   const PomoStart({

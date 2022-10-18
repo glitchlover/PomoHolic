@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:pomotica/model/enums/pomodoroStatus.dart';
 import 'package:pomotica/styles/colors.dart';
 
-import 'package:pomotica/screen/home/components/PomoSpace/pomoSpace.dart';
+import 'package:pomotica/screen/pomo_space_screen/pomo_space_screen.dart';
 
 
 class MyClockProgressBar extends StatelessWidget {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pomotica/styles/text_style.dart';
 
-import '../pomoSpace.dart';
+import '../pomo_space_screen.dart';
 
 class PomoRewards extends StatelessWidget {
   const PomoRewards({
